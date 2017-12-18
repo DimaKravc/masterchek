@@ -83,7 +83,7 @@ class Mch_Support_Class
         );
     }
 
-    public function get_entries($sort_field = Null, $sort_order = Null)
+    public function get_entries($sort_field = Null, $sort_order = 'DESC')
     {
         global $wpdb;
         $table_name = $wpdb->get_blog_prefix() . $this->db_prefix;
@@ -94,7 +94,7 @@ class Mch_Support_Class
         }
 
         if ($sort_order) {
-            $sql_request = $sql_request . ' GROUP BY ' . $sort_order;
+            $sql_request = $sql_request . ' ORDER BY ' . ' mch_id ' . $sort_order;
         }
 
         $results = $wpdb->get_results($sql_request, 'ARRAY_A');
@@ -132,8 +132,8 @@ class Mch_Support_Init_Menu_Class
     public function createMenu()
     {
         add_menu_page(
-            'Support requests',
-            'Support',
+            __('Support requests', 'mch_localization'),
+            __('Support', 'mch_localization'),
             'manage_options',
             'mch_support_table',
             array($this, 'createTable'),
@@ -149,7 +149,7 @@ class Mch_Support_Init_Menu_Class
 
         ?>
         <div class="wrap">
-            <h2>Support requests</h2>
+            <h2><?php __('Support requests', 'mch_localization') ?></h2>
             <?php $Table->display(); ?>
         </div>
         <?php
@@ -196,12 +196,12 @@ class Mch_Support_Create_Table_Class extends WP_List_Table
     {
         return array(
             'mch_id' => 'ID',
-            'mch_time' => 'Time',
-            'mch_author' => 'Author',
-            'mch_email' => 'Email',
-            'mch_tel' => 'Phone number',
-            'mch_subject' => 'Subject',
-            'mch_message' => 'Message',
+            'mch_time' => __('Time', 'mch_localization'),
+            'mch_author' => __('Author', 'mch_localization'),
+            'mch_email' => __('Email', 'mch_localization'),
+            'mch_tel' => __('Number', 'mch_localization'),
+            'mch_subject' => __('Subject', 'mch_localization'),
+            'mch_message' => __('Message', 'mch_localization'),
         );
     }
 

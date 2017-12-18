@@ -28,6 +28,13 @@
                 background: url("images/icon-clock.png") no-repeat center/contain;
             }
         }
+
+        a {
+            &:hover {
+                color: #ffffff;
+            }
+        }
+
         &__data {
             @include font-size(13.5px);
             color: #ffffff;

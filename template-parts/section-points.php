@@ -39,7 +39,7 @@ if (!empty($posts_array)): ?>
 
                 if ($content && !empty($content)):
                     $info_box_container = true; ?>
-                    <div id="info-box-<?php echo $post->ID; ?>">
+                    <div id="info-box-<?php echo $post->ID; ?>" style="display: none;">
                         <?php if (!empty($thumb_data)): ?>
                             <div class="info-box__logo"
                                  style="background-image: url('<?php echo esc_attr($thumb_data[0]); ?>')"></div>

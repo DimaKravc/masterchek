@@ -704,7 +704,7 @@ p {
   right: 0;
   bottom: 0;
   -webkit-backface-visibility: hidden;
-  transition: color .1s ease;
+  transition: all .10s ease;
 }
 
 .modal-close:before {
@@ -968,7 +968,7 @@ p {
 
 .section-promo {
   background: url("images/slide-bg-1.jpg") no-repeat top center/cover;
-  padding: 110px 0 165px;
+  padding: 110px 0 150px;
   color: #ffffff;
 }
 
@@ -1424,6 +1424,7 @@ p {
   clip-path: polygon(0 8vw, 100% 0, 100% 100%, 0 100%);
   margin-top: -8vw;
   position: relative;
+  overflow: hidden;
 }
 
 .section-points__header {
@@ -1610,8 +1611,8 @@ p {
 .info-box__content h5,
 .info-box__content h6,
 .info-box__content p {
-  margin-bottom: 0.4em;
-  line-height: 1.25;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
 }
 
 .info-box__content h1 {
@@ -1879,6 +1880,10 @@ p {
   background: url("images/icon-clock.png") no-repeat center/contain;
 }
 
+.list-contacts__item a:hover {
+  color: #ffffff;
+}
+
 .list-contacts__item__data {
   font-size: 13.5px;
   font-size: 0.84375rem;
@@ -2090,24 +2095,40 @@ p {
     line-height: 30px;
   }
 
-  .section-promo {
-    padding: 100px 0;
-  }
-
   .section-promo__col {
     width: 100%;
+  }
+
+  .section-advantages {
+    padding: 12vw 0;
   }
 
   .list-advantages__item {
     width: 50%;
   }
 
+  .section-rates {
+    padding: 12vw 0;
+  }
+
+  .section-offer {
+    padding: 12vw 0;
+  }
+
   .section-offer__carousel {
     padding: 0 30px;
   }
 
+  .section-achievements {
+    padding: 12vw 0;
+  }
+
   .list-achievements__item {
     width: 200px;
+  }
+
+  .section-points__header {
+    padding: 10vw 0 0;
   }
 
   .list-points {
@@ -2211,7 +2232,7 @@ p {
     right: 0;
     bottom: 0;
     -webkit-backface-visibility: hidden;
-    transition: color .1s ease;
+    transition: background .1s ease;
   }
 
   .mobile-menu__close:before {

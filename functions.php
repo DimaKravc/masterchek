@@ -35,6 +35,11 @@ if (!function_exists('theme_setup_callback')) :
          * Add feature image support
          */
         add_theme_support('post-thumbnails');
+
+        /**
+         * Add localizations file
+         */
+        load_theme_textdomain('mch_localization', get_template_directory() . '/languages');
     }
 endif;
 add_action('after_setup_theme', 'theme_setup_callback');
@@ -157,7 +162,7 @@ if (class_exists('MultiPostThumbnails')) {
      */
     new MultiPostThumbnails(
         array(
-            'label' => 'Featured Image Small',
+            'label' => __('Featured Image Small', 'mch_localization'),
             'id' => 'logo-small',
             'post_type' => 'points'
         )
@@ -173,7 +178,7 @@ function request_for_advice_callback()
     } else {
         $args = array(
             'author' => $_POST['author'],
-            'time' => date('Y/m/d H:i:s'),
+            'time' => current_time('mysql'),
             'email' => $_POST['email'],
             'tel' => $_POST['tel'],
             'subject' => $_POST['subject'],

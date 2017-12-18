@@ -1,6 +1,6 @@
 .section-promo {
     background: url("images/slide-bg-1.jpg") no-repeat top center/cover;
-    padding: 110px 0 165px;
+    padding: 110px 0 150px;
     color: #ffffff;
 
     &__col {
@@ -41,8 +41,6 @@
 
 @media (max-width: 991px) {
     .section-promo {
-        padding: 100px 0;
-
         &__col {
             width: 100%;
         }

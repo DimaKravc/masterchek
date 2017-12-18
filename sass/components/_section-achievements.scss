@@ -4,3 +4,9 @@
     margin-top: -8vw;
     padding: 8vw 0 9vw;
 }
+
+@media (max-width: 991px) {
+    .section-achievements {
+        padding: 12vw 0;
+    }
+}

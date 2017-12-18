@@ -45,22 +45,8 @@ function paymo_register_required_plugins()
      */
     $plugins = array(
         array(
-            'name' => 'Ajaxify site',
-            'slug' => 'ajaxify-site',
-            'source' => 'https://github.com/DimaKravc/plugins/archive/master.zip',
-            'required' => true,
-            'version' => '1.0',
-            'force_activation' => false,
-            'force_deactivation' => false,
-        ),
-        array(
-            'name' => 'Cyr to Lat enhanced',
-            'slug' => 'cyr3lat',
-            'required' => true,
-        ),
-        array(
-            'name' => 'TinyMCE Advanced',
-            'slug' => 'tinymce-advanced',
+            'name' => 'Multiple Post Thumbnails',
+            'slug' => 'multiple-post-thumbnails',
             'required' => true,
         ),
     );

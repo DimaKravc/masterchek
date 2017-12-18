@@ -1,0 +1,521 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Masterchek 1.0\n"
+"POT-Creation-Date: 2017-12-18 20:49+0500\n"
+"PO-Revision-Date: 2017-12-18 20:50+0500\n"
+"Last-Translator: \n"
+"Language-Team: dimakravchenko.w@gmail.com\n"
+"Language: ru_RU\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.4\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"X-Poedit-KeywordsList: __\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: node_modules\n"
+"X-Poedit-SearchPathExcluded-1: maps\n"
+"X-Poedit-SearchPathExcluded-2: fonts\n"
+"X-Poedit-SearchPathExcluded-3: js\n"
+"X-Poedit-SearchPathExcluded-4: sass\n"
+"X-Poedit-SearchPathExcluded-5: styles\n"
+
+#: functions.php:165
+msgid "Featured Image Small"
+msgstr "Миниатюра записи"
+
+#: inc/mch-class-support.php:135 inc/mch-class-support.php:152
+msgid "Support requests"
+msgstr "Запросы на поддержку"
+
+#: inc/mch-class-support.php:136
+msgid "Support"
+msgstr "Поддержка"
+
+#: inc/mch-class-support.php:198
+msgid "ID"
+msgstr "Айди"
+
+#: inc/mch-class-support.php:199
+msgid "Time"
+msgstr "Время"
+
+#: inc/mch-class-support.php:200
+msgid "Author"
+msgstr "Автор"
+
+#: inc/mch-class-support.php:201 inc/mch-meta-boxes.php:197
+msgid "Email"
+msgstr "Электронный адрес"
+
+#: inc/mch-class-support.php:202
+msgid "Number"
+msgstr "Номер телефона"
+
+#: inc/mch-class-support.php:203
+msgid "Subject"
+msgstr "Тема запроса"
+
+#: inc/mch-class-support.php:204
+msgid "Message"
+msgstr "Сообщение"
+
+#: inc/mch-meta-boxes.php:5
+msgid "Happy Customers"
+msgstr "Счастливые покупатели"
+
+#: inc/mch-meta-boxes.php:6
+msgid "Completed Requests"
+msgstr "Выполнение заявки"
+
+#: inc/mch-meta-boxes.php:7
+msgid "Pre Orders"
+msgstr "Пред заказ"
+
+#: inc/mch-meta-boxes.php:9
+msgid "Parent"
+msgstr "Вложен в"
+
+#: inc/mch-meta-boxes.php:10
+msgid "Short Description"
+msgstr "Короткое описание"
+
+#: inc/mch-meta-boxes.php:11
+msgid "Address"
+msgstr "Адрес"
+
+#: inc/mch-meta-boxes.php:12
+msgid "Location"
+msgstr "Местоположение"
+
+#: inc/mch-meta-boxes.php:14
+msgid "Map Settings"
+msgstr "Настройки карты"
+
+#: inc/mch-meta-boxes.php:16 inc/mch-post-types.php:112
+#: inc/mch-post-types.php:117
+msgid "Contacts"
+msgstr "Контакты"
+
+#: inc/mch-meta-boxes.php:17
+msgid "Social Profiles"
+msgstr "Профили в социальных сетях"
+
+#: inc/mch-meta-boxes.php:30 inc/mch-meta-boxes.php:48
+#: inc/mch-meta-boxes.php:66
+msgid "Title"
+msgstr "Заголовок"
+
+#: inc/mch-meta-boxes.php:35 inc/mch-meta-boxes.php:53
+#: inc/mch-meta-boxes.php:71
+msgid "Amount"
+msgstr "Количество"
+
+#: inc/mch-meta-boxes.php:145 inc/mch-meta-boxes.php:170
+msgid "Latitude"
+msgstr "Широта"
+
+#: inc/mch-meta-boxes.php:148 inc/mch-meta-boxes.php:175
+msgid "Longitude"
+msgstr "Долгота"
+
+#: inc/mch-meta-boxes.php:165
+msgid "Api key"
+msgstr "Api ключ"
+
+#: inc/mch-meta-boxes.php:180
+msgid "Zoom"
+msgstr "Приблежение"
+
+#: inc/mch-meta-boxes.php:202
+msgid "Phone"
+msgstr "Номер телефона"
+
+#: inc/mch-meta-boxes.php:207
+msgid "WH start"
+msgstr "Начало РД"
+
+#: inc/mch-meta-boxes.php:212
+msgid "WH end"
+msgstr "Конец РД"
+
+#: inc/mch-post-types.php:10 inc/mch-post-types.php:15
+msgid "Loaders"
+msgstr "Прелоадеры"
+
+#: inc/mch-post-types.php:11
+msgid "All loaders"
+msgstr "Все прелоадеры"
+
+#: inc/mch-post-types.php:12
+msgid "Add loader"
+msgstr "Добавить прелоадер"
+
+#: inc/mch-post-types.php:13
+msgid "Add new loader"
+msgstr "Добавить новый прелоадер"
+
+#: inc/mch-post-types.php:14
+msgid "Loaders not found"
+msgstr "Прелоадеры не найдены"
+
+#: inc/mch-post-types.php:27 inc/mch-post-types.php:32
+msgid "Offers"
+msgstr "Предложения"
+
+#: inc/mch-post-types.php:28
+msgid "All offers"
+msgstr "Все предложения"
+
+#: inc/mch-post-types.php:29 inc/mch-post-types.php:30
+msgid "Add offer"
+msgstr "Добавить предложение"
+
+#: inc/mch-post-types.php:31
+msgid "Add new offer"
+msgstr "Добавить новое предложение"
+
+#: inc/mch-post-types.php:44 inc/mch-post-types.php:49
+msgid "Achievements"
+msgstr "Достижения"
+
+#: inc/mch-post-types.php:45
+msgid "All achievements"
+msgstr "Все достижения"
+
+#: inc/mch-post-types.php:46
+msgid "Add achievement"
+msgstr "Добавить достижение"
+
+#: inc/mch-post-types.php:47
+msgid "Add new achievement"
+msgstr "Добавить новое достижение"
+
+#: inc/mch-post-types.php:48
+msgid "Achievement not found"
+msgstr "Достижение не найдено"
+
+#: inc/mch-post-types.php:61 inc/mch-post-types.php:66
+msgid "Points"
+msgstr "Точки"
+
+#: inc/mch-post-types.php:62
+msgid "All points"
+msgstr "Все точки"
+
+#: inc/mch-post-types.php:63
+msgid "Add point"
+msgstr "Добавить точку"
+
+#: inc/mch-post-types.php:64
+msgid "Add new point"
+msgstr "Добавить новую точку"
+
+#: inc/mch-post-types.php:65
+msgid "Points not found"
+msgstr "Точек не найдено"
+
+#: inc/mch-post-types.php:78 inc/mch-post-types.php:83
+msgid "Maps"
+msgstr "Карты"
+
+#: inc/mch-post-types.php:79
+msgid "All maps"
+msgstr "Все карты"
+
+#: inc/mch-post-types.php:80
+msgid "Add map"
+msgstr "Добавить карту"
+
+#: inc/mch-post-types.php:81
+msgid "Add new map"
+msgstr "Добавить новую карту"
+
+#: inc/mch-post-types.php:82
+msgid "Maps not found"
+msgstr "Карты не найдены"
+
+#: inc/mch-post-types.php:95 inc/mch-post-types.php:100
+msgid "Customers"
+msgstr "Клиенты"
+
+#: inc/mch-post-types.php:96
+msgid "All customers"
+msgstr "Все клиенты"
+
+#: inc/mch-post-types.php:97
+msgid "Add customer"
+msgstr "Добавить клиента"
+
+#: inc/mch-post-types.php:98
+msgid "Add new customer"
+msgstr "Добавить нового клиента"
+
+#: inc/mch-post-types.php:99
+msgid "Customers not found"
+msgstr "Клиентов не найдено"
+
+#: inc/mch-post-types.php:113
+msgid "All contacts"
+msgstr "Все контакты"
+
+#: inc/mch-post-types.php:114
+msgid "Add contact"
+msgstr "Добавить контакт"
+
+#: inc/mch-post-types.php:115
+msgid "Add new contact"
+msgstr "Добавить новый контакт"
+
+#: inc/mch-post-types.php:116
+msgid "Contacts not found"
+msgstr "Контакты не найдены"
+
+#: inc/tgm/tgm-plugin-activation.php:334
+msgid "Install Required Plugins"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:335
+msgid "Install Plugins"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:337
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:339
+#, php-format
+msgid "Updating Plugin: %s"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:340
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:392
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:393
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:394 inc/tgm/tgm-plugin-activation.php:3252
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:395
+msgid "The following plugin was activated successfully:"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:397
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:399
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:401
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:402
+msgid "Dismiss this notice"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:403
+msgid ""
+"There are one or more required or recommended plugins to install, update or "
+"activate."
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:404
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2075
+#, php-format
+msgid "TGMPA v%s"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2366
+msgid "Required"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2369
+msgid "Recommended"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2385
+msgid "WordPress Repository"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2388
+msgid "External Source"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2391
+msgid "Pre-Packaged"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2408
+msgid "Not Installed"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2412
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2414
+msgid "Active"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2420
+msgid "Required Update not Available"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2423
+msgid "Requires Update"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2426
+msgid "Update recommended"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2583
+msgid "Installed version:"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2591
+msgid "Minimum required version:"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2603
+msgid "Available version:"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2640
+msgid "Plugin"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2641
+msgid "Source"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2642
+msgid "Type"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2646
+msgid "Version"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2647
+msgid "Status"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2696
+#, php-format
+msgid "Install %2$s"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2701
+#, php-format
+msgid "Update %2$s"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2707
+#, php-format
+msgid "Activate %2$s"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2810
+msgid "Install"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2816
+msgid "Update"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2819
+msgid "Activate"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2850
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2852
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2893
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:2895
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:3251
+msgid "Plugin activation failed."
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:3591
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:3594
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:3596
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:3600
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:3602
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:3603
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:3605
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:3608
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:3611
+msgid "All installations have been completed."
+msgstr ""
+
+#: inc/tgm/tgm-plugin-activation.php:3613
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""

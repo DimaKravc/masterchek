@@ -21,6 +21,12 @@
     }
 }
 
+@media (max-width: 991px) {
+    .section-advantages {
+        padding: 12vw 0;
+    }
+}
+
 @media (max-width: 767px) {
     .section-advantages {
         &__header {

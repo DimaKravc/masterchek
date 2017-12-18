@@ -22,9 +22,10 @@
                         <div class="form__group --select">
                             <label for="subject">Тематика вопроса</label>
                             <select data-js="select" name="subject" id="subject">
-                                <option value="Как работает реклама на чеках">как работает реклама на чеках</option>
-                                <option value="Сколько стоит индивидуальный дизайн">сколько стоит</option>
-                                <option value="Как я могу с вами связаться">Как я могу с вами связаться</option>
+                                <option value="Как работает реклама на чеках">Как работает реклама на чеках</option>
+                                <option value="Индивидуальный дизайн">Индивидуальный дизайн</option>
+                                <option value="Места распространения">Места распространения</option>
+                                <option value="Нужна консультация">Нужна консультация</option>
                             </select>
                         </div>
                         <div class="form__group">

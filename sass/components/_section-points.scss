@@ -3,6 +3,7 @@
     clip-path: polygon(0 8vw, 100% 0, 100% 100%, 0 100%);
     margin-top: -8vw;
     position: relative;
+    overflow: hidden;
 
     &__header {
         top: 0;
@@ -43,6 +44,14 @@
                 box-shadow: none;
                 background: linear-gradient(79deg, #de1b3d 0%, #f6720e 100%);
             }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .section-points {
+        &__header {
+            padding: 10vw 0 0;
         }
     }
 }
