@@ -1,0 +1,121 @@
+.form {
+    &__group {
+        margin-bottom: 35px;
+        position: relative;
+
+        &:before {
+            content: "";
+            height: 1px;
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            bottom: 0;
+            background-color: $color-accent;
+            will-change: left, right;
+            transition: all .15s ease-in;
+        }
+
+        label {
+            display: block;
+            @include font-size(15.24px);
+            color: #333333;
+            transition: color .2s ease-in;
+        }
+
+        input {
+            display: block;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid rgba(51, 51, 51, 0.50);
+            height: 28px;
+        }
+
+        textarea {
+            display: block;
+            margin-top: 16px;
+            resize: none;
+            border: 1px solid rgba(51, 51, 51, 0.50);
+            border-radius: 3px;
+            width: 100%;
+            min-height: 140px;
+            padding: 6px 10px;
+            transition: border-color .2s ease-in;
+        }
+
+        .ui-selectmenu-button {
+            color: #333333;
+            text-transform: uppercase;
+            width: auto !important;
+            display: inline-block;
+            height: 28px;
+            line-height: 28px;
+            margin-top: 16px;
+        }
+
+        &.--input-focused,
+        &.--textarea-focused {
+            label {
+                color: $color-accent;
+            }
+        }
+
+        &.--input-focused {
+            &:before {
+                left: 0;
+                right: 0;
+            }
+        }
+
+        &.--select-focused {
+            &:before {
+                left: 0;
+                right: 0;
+            }
+        }
+
+        &.--textarea-focused {
+            textarea {
+                border-color: $color-accent;
+            }
+        }
+    }
+
+    &__success-tooltip,
+    &__error-tooltip {
+        margin: 25px 0 0;
+        padding: 12px;
+        border: 1px solid;
+        border-radius: 3px;
+        text-align: center;
+        font-size: 14px;
+        user-select: none;
+    }
+
+    &__success-tooltip {
+        color: green;
+    }
+
+    &__error-tooltip {
+        color: red;
+    }
+
+    .form-submit {
+        margin: 40px 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .form {
+        &__group {
+            margin-bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .form {
+        &__group {
+            margin-bottom: 25px;
+        }
+    }
+}

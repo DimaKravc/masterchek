@@ -1,0 +1,29 @@
+.slider-container {
+    position: relative;
+
+    .back-bar {
+        height: 4px;
+        width: 100%;
+        background: #E4E4E4;
+        position: initial;
+
+        .selected-bar {
+            background: #c34031;
+        }
+
+        .pointer {
+            background: #c34031;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            top: 50%;
+            margin-top: -6px;
+            border: none;
+
+        }
+
+        .pointer-label {
+            display: none;
+        }
+    }
+}

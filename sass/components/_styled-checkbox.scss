@@ -1,0 +1,63 @@
+.styled-checkbox {
+    display: none;
+
+    & + label {
+        position: relative;
+        padding-left: 38px;
+        text-transform: uppercase;
+        user-select: none;
+        margin-bottom: 0;
+
+        .checkbox-icon {
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: -12px;
+            transition: background-color .13s ease, border-color .13s ease;
+
+            &:before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background: url("images/icon-checkbox.png") no-repeat center;
+                opacity: 0;
+                transition: all .13s ease;
+            }
+        }
+    }
+
+    &:disabled {
+        & + label {
+            color: #dddddd;
+
+            .checkbox-icon {
+                cursor: default;
+                background: #dddddd;
+            }
+        }
+    }
+
+    &:checked {
+        & + label {
+            color: #c03842;
+
+            .checkbox-icon {
+                border-color: #c03842;
+                background: #c03842;
+
+                &:before {
+                    transform: scale(0.7);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

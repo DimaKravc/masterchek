@@ -1,0 +1,39 @@
+.section-rates {
+    background: url("images/slide-bg-3.jpg") no-repeat center/cover;
+    clip-path: polygon(0 8vw, 100% 0, 100% 100%, 0 100%);
+    margin-top: -8vw;
+    padding: 8vw 0 9vw;
+
+    &__header {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #ffffff;
+    }
+
+    &__title {
+        text-transform: uppercase;
+        margin-bottom: 0.75rem;
+    }
+
+    &__subtitle {
+        text-transform: uppercase;
+        @include font-size(17px);
+    }
+
+    &__footer {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 767px) {
+    .section-rates {
+        &__title {
+            @include font-size(45px);
+        }
+
+        &__subtitle {
+            @include font-size(15px);
+        }
+    }
+}

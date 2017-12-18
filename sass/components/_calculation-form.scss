@@ -1,0 +1,92 @@
+.calculation-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 75px 60px;
+
+    &__item {
+        width: 30%;
+        margin-bottom: 55px;
+
+        &.--place {
+            .ui-selectmenu-button {
+                color: #c34031;
+
+                .ui-icon {
+                    background: url("images/icon-arrow-bottom-red.png") no-repeat center/cover;
+                }
+            }
+        }
+
+        &.--total {
+            text-align: right;
+        }
+    }
+
+    label {
+        display: block;
+        margin-bottom: 25px;
+        @include font-size(18.5px);
+    }
+
+    .ui-selectmenu-button {
+        @include font-size(30px);
+        width: auto !important;
+        display: inline-block;
+    }
+
+    &__checkboxes-wrap {
+        display: flex;
+        padding: 10px 0;
+
+        label {
+            margin: 0 28px 0 0;
+        }
+    }
+
+    &__total {
+        @include font-size(30px);
+        color: #f15f18;
+        border-bottom: 1px solid #e4e4e4;
+        display: block;
+        padding-bottom: 5px;
+    }
+
+    .period-range-slider {
+        margin: -8px 0 15px;
+
+        label {
+            @include font-size(30px);
+            color: #c34031;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+@media (max-width: 1299px) {
+    .calculation-form {
+        margin: 0 0 50px;
+
+        &__item {
+            width: 35%;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .calculation-form {
+        &__item {
+            margin-bottom: 30px;
+            width: 42%;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .calculation-form {
+        &__item {
+            margin-bottom: 25px;
+            width: 100%;
+        }
+    }
+}

@@ -1,0 +1,28 @@
+.order-button {
+    @include font-size(14px);
+    font-weight: $font-weight-bold;
+    background: transparent;
+    box-shadow: 0 11px 25px 0 rgba(0, 0, 0, 0.28);
+    border: 1px solid #ffffff;
+    min-width: 180px;
+    height: 33px;
+    line-height: 32px;
+
+    &:hover {
+        box-shadow: 0 13px 29px 0 rgba(0, 0, 0, 0.30);
+    }
+}
+
+@media (max-width: 991px) {
+    .order-button {
+        min-width: 170px;
+        height: 30px;
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .order-button {
+        display: none;
+    }
+}

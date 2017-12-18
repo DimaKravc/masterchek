@@ -1,0 +1,39 @@
+.site-nav {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .site-nav {
+        margin: 0 5px;
+        display: block;
+
+        .menu {
+            display: flex;
+
+            .menu-item {
+                a {
+                    display: inline-block;
+                    text-decoration: none;
+                    white-space: nowrap;
+                    @include font-size(14px);
+                    font-weight: $font-weight-bold;
+                    text-transform: uppercase;
+                    color: #ffffff;
+                    letter-spacing: -0.4px;
+                    height: 40px;
+                    line-height: 40px;
+                    padding: 0 10px;
+                    margin: 0 5px;
+                    transition: color .1s ease;
+                    -webkit-tap-highlight-color: transparent;
+                    user-select: none;
+
+                    &:hover,
+                    &.--active {
+                        color: hsla(0, 0%, 100%, .5);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,69 @@
+.advice {
+    display: flex;
+
+    &__form {
+        width: 53%;
+        padding: 52px 60px 45px 48px;
+
+        .form {
+            &__control {
+                text-align: right;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 47%;
+        padding: 40px;
+        background: url("images/advice-form-bg.jpg") no-repeat center/cover;
+    }
+
+    &__title {
+        @include font-size(25.5px);
+        text-transform: uppercase;
+    }
+}
+
+@media (max-width: 991px) {
+    .advice {
+        &__form {
+            width: 52%;
+            padding: 40px;
+        }
+
+        &__content {
+            width: 48%;
+            padding: 35px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .advice {
+        &__form {
+            width: 100%;
+
+            .form {
+                &__control {
+                    text-align: center;
+                }
+            }
+        }
+
+        &__content {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .advice {
+        &__form {
+            padding: 30px;
+        }
+    }
+}

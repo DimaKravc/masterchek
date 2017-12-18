@@ -1,0 +1,95 @@
+/* =====================================================
+   3. Typography styles
+   ===================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 1.25rem;
+    font-weight: $font-weight-bold;
+}
+
+h1 {
+    @include font-size(62px);
+    line-height: 1.2187;
+}
+
+h2 {
+    @include font-size(57.5px);
+    line-height: 1.2;
+}
+
+h3 {
+    @include font-size(32px);
+    line-height: 1.1875;
+}
+
+h4 {
+    @include font-size(22px);
+    line-height: 1.1666;
+}
+
+h5 {
+    @include font-size(12px);
+    line-height: 1.1666;
+}
+
+h6 {
+    @include font-size(8px);
+    line-height: 1.1666;
+}
+
+b,
+strong {
+    font-weight: $font-weight-bold;
+}
+
+small {
+    @include font-size(11px);
+}
+
+em {
+    font-style: italic;
+}
+
+p {
+    margin-bottom: 1.25rem;
+}
+
+.alignleft {
+    float: left;
+    margin: 0.6em 2em 1em 0;
+}
+
+.alignright {
+    float: right;
+    margin: 0.6em 0 1em 2em;
+    text-align: right;
+}
+
+.aligncenter {
+    clear: both;
+    display: block;
+    margin: 1em auto 2em;
+    text-align: center;
+}
+
+.alignnone {
+    margin-bottom: 2em;
+    margin-top: 1em;
+}
+
+.wp-caption {
+    max-width: 100%;
+}
+
+.gallery-caption,
+.wp-caption-text {
+    @include font-size(11px);
+    font-style: italic;
+    margin: 0.5em 0.2em 0;
+}

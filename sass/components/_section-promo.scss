@@ -1,0 +1,64 @@
+.section-promo {
+    background: url("images/slide-bg-1.jpg") no-repeat top center/cover;
+    padding: 110px 0 165px;
+    color: #ffffff;
+
+    &__col {
+        width: 40%;
+    }
+
+    &__logo {
+        margin-bottom: 65px;
+
+        img {
+            max-width: 255px;
+            margin: auto;
+        }
+    }
+
+    &__title {
+        @include font-size(32px);
+        text-transform: uppercase;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        @include font-size(17px);
+        line-height: 1.45;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 1299px) {
+    .section-promo {
+        padding: 110px 0;
+
+        &__col {
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .section-promo {
+        padding: 100px 0;
+
+        &__col {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .section-promo {
+        padding: 70px 0;
+
+        &__logo {
+            margin-bottom: 40px;
+        }
+
+        &__text {
+            margin-bottom: 30px;
+        }
+    }
+}

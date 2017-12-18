@@ -1,0 +1,102 @@
+.modal {
+    $this: &;
+
+    &-dialog {
+        margin: 40px auto;
+    }
+
+    &-content {
+        border: none;
+        border-radius: 0;
+        box-shadow: 2px 3.464px 18px 0 rgba(0, 0, 0, 0.31);
+    }
+
+    &.--advice {
+        #{$this}-dialog {
+            width: 850px;
+        }
+    }
+
+    &-close {
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: none;
+        border: none;
+        outline: none;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+        z-index: 1;
+        transform: rotate(-45deg);
+        -webkit-backface-visibility: hidden;
+
+        &:before,
+        &:after {
+            content: "";
+            background: #ffffff;
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            -webkit-backface-visibility: hidden;
+            transition: color .1s ease;
+        }
+
+        &:before {
+            width: 2px;
+            height: 100%;
+        }
+
+        &:after {
+            height: 2px;
+            width: 100%;
+        }
+
+        &:hover {
+            &:before,
+            &:after {
+                background: hsla(0, 0%, 100%, .5);
+            }
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .modal {
+        $this: &;
+
+        &.--advice {
+            #{$this}-dialog {
+                width: 750px;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .modal {
+        $this: &;
+
+        &.--advice {
+            #{$this}-dialog {
+                width: 500px;
+            }
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .modal {
+        $this: &;
+
+        &.--advice {
+            #{$this}-dialog {
+                width: 300px;
+            }
+        }
+    }
+}

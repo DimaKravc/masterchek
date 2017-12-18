@@ -1,0 +1,108 @@
+.list-achievements {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 110px;
+
+    &__item {
+        width: 255px;
+        color: #ffffff;
+        text-align: center;
+        border: 2px solid #ffffff;
+        padding: 0 10px;
+        border-radius: 8px;
+
+        .legend {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+
+            &__inner {
+                display: flex;
+                overflow: hidden;
+                text-align: center;
+                white-space: nowrap;
+                align-items: center;
+                justify-content: center;
+            }
+
+            &__left,
+            &__right {
+                display: inline-block;
+                vertical-align: middle;
+                border-top: 2px solid #ffffff;
+                width: 999px;
+                margin: 0 0 0 -999px;
+            }
+
+            &__content {
+                padding: 0 40px;
+            }
+
+            &__right {
+                margin: 0 -999px 0 0;
+            }
+        }
+
+        .smile-icon {
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            background: url("images/smile.png") no-repeat center / contain;
+        }
+
+        .like-icon {
+            display: inline-block;
+            width: 60px;
+            height: 62px;
+            background: url("images/like.png") no-repeat center / contain;
+        }
+
+        .web-icon {
+            display: inline-block;
+            width: 60px;
+            height: 62px;
+            background: url("images/web.png") no-repeat center / contain;
+        }
+
+        &__amount {
+            @include font-size(37.5px);
+            margin: 20px 0;
+        }
+
+        &__text {
+            @include font-size(13.5px);
+            margin: 20px 0;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media (max-width: 1299px) {
+    .list-achievements {
+        margin: 0;
+    }
+}
+
+@media (max-width: 991px) {
+    .list-achievements {
+        &__item {
+            width: 200px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .list-achievements {
+        flex-direction: column;
+
+        &__item {
+            margin-bottom: 40px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

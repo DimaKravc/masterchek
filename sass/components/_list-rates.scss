@@ -1,0 +1,97 @@
+.list-rates {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+
+    &__item {
+        margin-bottom: 25px;
+        text-align: center;
+        width: 25%;
+        padding: 0 5px;
+        color: #ffffff;
+        $this: &;
+
+        &__size {
+            display: block;
+            @include font-size(180px);
+            font-weight: $font-weight-bold;
+            text-transform: uppercase;
+        }
+
+        &__explanation {
+            @include font-size(17px);
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        &__check {
+            display: block;
+            margin: 0 auto 25px;
+            width: 170px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: top center;
+
+            &.--small {
+                height: 155px;
+                background-image: url("images/check-s.png");
+            }
+
+            &.--middle {
+                height: 212px;
+                background-image: url("images/check-m.png");
+            }
+
+            &.--longer {
+                height: 270px;
+                background-image: url("images/check-l.png");
+            }
+
+            &.--vip {
+                height: 270px;
+                background-image: url("images/check-vip.png");
+            }
+        }
+
+        &.--vip {
+            color: #ffde00;
+
+            #{$this}__size {
+                position: relative;
+
+                &:before {
+                    content: "";
+                    width: 68px;
+                    height: 60px;
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -34px;
+                    top: -13px;
+                    background: url("images/krown.png") no-repeat center/contain;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1299px) {
+    .list-rates {
+        &__item {
+            width: 50%;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .list-rates {
+        &__item {
+            margin-bottom: 15px;
+            width: 100%;
+
+            &__size {
+                @include font-size(150px);
+            }
+        }
+    }
+}

@@ -1,0 +1,36 @@
+@media (max-width: 767px) {
+    .site-nav-mobile  {
+        margin: 30px 0 40px;
+
+        .menu {
+            display: block;
+
+            .menu-item {
+                display: block;
+                height: 80px;
+                line-height: 80px;
+
+                a {
+                    height: 80px;
+                    text-transform: none;
+                    @include font-size(28px);
+                    font-weight: $font-weight-normal;
+                    text-align: center;
+                    text-decoration: none;
+                    white-space: nowrap;
+                    color: #ffffff;
+                    letter-spacing: -0.4px;
+                    padding: 0 10px;
+                    transition: color .1s ease;
+                    -webkit-tap-highlight-color: transparent;
+                    user-select: none;
+
+                    &:hover,
+                    &.--active {
+                        color: hsla(0, 0%, 100%, .5);
+                    }
+                }
+            }
+        }
+    }
+}

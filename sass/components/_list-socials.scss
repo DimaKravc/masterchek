@@ -1,0 +1,28 @@
+.list-socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__item {
+        margin: 0 5px;
+
+        &__profile {
+            text-decoration: none;
+            width: 33px;
+            height: 33px;
+            display: block;
+
+            &.--in {
+                background: url("images/icon-in.png") no-repeat center/cover;
+            }
+
+            &.--fb {
+                background: url("images/icon-fb.png") no-repeat center/cover;
+            }
+
+            &.--tg {
+                background: url("images/icon-tg.png") no-repeat center/cover;
+            }
+        }
+    }
+}
