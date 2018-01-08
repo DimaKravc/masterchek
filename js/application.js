@@ -66,13 +66,15 @@ jQuery(document).ready(function ($) {
             });
         },
         offerCarousel: function () {
-            $('[data-js="offer-carousel"]').owlCarousel({
-                items: 1,
-                autoHeight: true,
-                mouseDrag: false,
-                nav: true,
-                navSpeed: 400,
-                dotsSpeed: 400
+            $(window).load(function () {
+                $('[data-js="offer-carousel"]').owlCarousel({
+                    items: 1,
+                    autoHeight: true,
+                    mouseDrag: false,
+                    nav: true,
+                    navSpeed: 400,
+                    dotsSpeed: 400
+                });
             });
         },
         achievementsCounter: function () {
