@@ -5,7 +5,7 @@
  * @since 1.0
  */
 
-define('MASTERCHEK_VERSION', 1.0);
+define('MASTERCHEK_VERSION', 1.1);
 
 if (!function_exists('theme_setup_callback')) :
     /**
