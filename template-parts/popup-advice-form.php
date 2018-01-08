@@ -1,4 +1,4 @@
-<div class="modal --advice fade" id="advicePopup" tabindex="-1" role="dialog">
+<div class="modal modal_advice fade" id="advicePopup" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
         <button type="button" class="modal-close" data-dismiss="modal" aria-label="Close"></button>
         <div class="modal-content">

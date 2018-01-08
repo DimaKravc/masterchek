@@ -1,6 +1,6 @@
 .section-promo {
     background: url("images/slide-bg-1.jpg") no-repeat top center/cover;
-    padding: 110px 0 150px;
+    padding: rem(115px) 0 calc(8vw + 15px);
     color: #ffffff;
 
     &__col {
@@ -8,38 +8,36 @@
     }
 
     &__logo {
-        margin-bottom: 65px;
+        margin-bottom: rem(50px);
 
         img {
-            max-width: 255px;
+            max-width: rem(220px);
             margin: auto;
         }
     }
 
     &__title {
-        @include font-size(32px);
+        @include font-size(30px);
         text-transform: uppercase;
         margin-bottom: 10px;
     }
 
     &__text {
-        @include font-size(17px);
+        @include font-size(15.5px);
         line-height: 1.45;
-        margin-bottom: 40px;
+        margin-bottom: rem(35px);
     }
 }
 
-@media (max-width: 1299px) {
+@media (max-width: $screen-lg-max) {
     .section-promo {
-        padding: 110px 0;
-
         &__col {
             width: 50%;
         }
     }
 }
 
-@media (max-width: 991px) {
+@media (max-width: $screen-md-max) {
     .section-promo {
         &__col {
             width: 100%;
@@ -47,16 +45,14 @@
     }
 }
 
-@media (max-width: 767px) {
+@supports (-ms-ime-align:auto) {
     .section-promo {
-        padding: 70px 0;
+        padding-bottom: rem(50px);
+    }
+}
 
-        &__logo {
-            margin-bottom: 40px;
-        }
-
-        &__text {
-            margin-bottom: 30px;
-        }
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .section-promo {
+        padding-bottom: rem(50px);
     }
 }

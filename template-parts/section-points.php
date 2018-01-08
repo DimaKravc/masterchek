@@ -6,7 +6,7 @@ if (!empty($posts_array)): ?>
         <div class="section-points__header">
             <h2 class="section-points__title">наши точки</h2>
             <div class="section-points__tabs">
-                <button class="section-points__tabs__item button --active" data-tab="#point-1">список</button>
+                <button class="section-points__tabs__item button status_active" data-tab="#point-1">список</button>
                 <button class="section-points__tabs__item button" data-tab="#point-2">на карте</button>
             </div>
         </div>
@@ -44,7 +44,7 @@ if (!empty($posts_array)): ?>
                             <div class="info-box__logo"
                                  style="background-image: url('<?php echo esc_attr($thumb_data[0]); ?>')"></div>
                         <? endif; ?>
-                        <div class="info-box__inner <?php echo esc_attr(empty($thumb_data) ? '--without-thumb' : ''); ?>">
+                        <div class="info-box__inner <?php echo esc_attr(empty($thumb_data) ? 'without-thumb' : ''); ?>">
                             <div class="info-box__content"><?php echo $content; ?></div>
                         </div>
                     </div>

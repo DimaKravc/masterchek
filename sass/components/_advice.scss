@@ -3,7 +3,7 @@
 
     &__form {
         width: 53%;
-        padding: 52px 60px 45px 48px;
+        padding: rem(48px) rem(52px) rem(45px) rem(45px);
 
         .form {
             &__control {
@@ -18,31 +18,17 @@
         justify-content: center;
         flex-direction: column;
         width: 47%;
-        padding: 40px;
+        padding: rem(32px);
         background: url("images/advice-form-bg.jpg") no-repeat center/cover;
     }
 
     &__title {
-        @include font-size(25.5px);
+        font-size: rem(24px);
         text-transform: uppercase;
     }
 }
 
-@media (max-width: 991px) {
-    .advice {
-        &__form {
-            width: 52%;
-            padding: 40px;
-        }
-
-        &__content {
-            width: 48%;
-            padding: 35px;
-        }
-    }
-}
-
-@media (max-width: 767px) {
+@media (max-width: $screen-sm-max) {
     .advice {
         &__form {
             width: 100%;
@@ -60,10 +46,10 @@
     }
 }
 
-@media (max-width: 575px) {
+@media (max-width: $screen-sm-max - 200px) {
     .advice {
         &__form {
-            padding: 30px;
+            padding: rem(30px);
         }
     }
 }

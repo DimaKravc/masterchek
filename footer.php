@@ -34,7 +34,7 @@ $points_array = get_posts(array('post_type' => 'points'));
                 {
                     id: '<?php echo $point->ID?>',
                     title: '<?php echo esc_js($point->post_title); ?>',
-                    icon: '<?php echo get_template_directory_uri(); ?>/images/icon-marker.png',
+                    icon: '<?php echo get_template_directory_uri(); ?>/images/maps-and-flags.svg',
                     lat: <?php echo esc_js($post_meta['_meta-point-lat'][0]); ?>,
                     lng: <?php echo esc_js($post_meta['_meta-point-lng'][0]); ?>,
                     zIndex: <?php echo !$post_meta['_meta-point-parent-id'] ? '10' : '5'; ?>

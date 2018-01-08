@@ -6,26 +6,20 @@
     margin-left: auto;
 }
 
-@media (min-width: 1300px) {
+@media (min-width: $screen-lg-min) {
     .container {
-        width: 1250px;
+        width: 1170px;
     }
 }
 
-@media (min-width: 992px) {
+@media (min-width: $screen-md-min) {
     .container {
         width: 960px;
     }
 }
 
-@media (min-width: 768px) {
+@media (min-width: $screen-sm-min) {
     .container {
         width: 720px;
-    }
-}
-
-@media (min-width: 576px) {
-    .container {
-        width: 540px;
     }
 }

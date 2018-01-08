@@ -7,7 +7,7 @@
             <h2 class="section-promo__title">реклама на чековых лентах</h2>
             <p class="section-promo__text">Рекламное агентство MasterCheck предлагает вам инновационный маркетинговый
                 концепт,
-                нововведение, являющееся уникальным по всей Республике Узбекистан</p>
+                нововведение, являющееся уникальным по всей Республике Узбекистан.</p>
             <button class="button --light section-promo__button" data-toggle="modal" data-target="#advicePopup">получить консультацию</button>
             <?php get_template_part('template-parts/popup-advice-form'); ?>
         </div>

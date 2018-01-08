@@ -2,7 +2,7 @@
     $this: &;
 
     &-dialog {
-        margin: 40px auto;
+        margin: 10px auto;
     }
 
     &-content {
@@ -11,9 +11,9 @@
         box-shadow: 2px 3.464px 18px 0 rgba(0, 0, 0, 0.31);
     }
 
-    &.--advice {
+    &_advice {
         #{$this}-dialog {
-            width: 850px;
+            width: 800px;
         }
     }
 
@@ -65,11 +65,11 @@
     }
 }
 
-@media (max-width: 991px) {
+@media (max-width: $screen-md-max) {
     .modal {
         $this: &;
 
-        &.--advice {
+        &_advice {
             #{$this}-dialog {
                 width: 750px;
             }
@@ -77,11 +77,24 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $screen-sm-max) {
     .modal {
         $this: &;
 
-        &.--advice {
+        &-close {
+            &:before,
+            &:after {
+                background-color: #333333;
+            }
+
+            &:hover {
+                &:before,
+                &:after {
+                    background-color: #000000;
+                }
+            }
+        }
+        &_advice {
             #{$this}-dialog {
                 width: 500px;
             }
@@ -89,13 +102,14 @@
     }
 }
 
-@media (max-width: 575px) {
+@media (max-width: $screen-sm-max - 200px) {
     .modal {
         $this: &;
 
-        &.--advice {
+        &_advice {
             #{$this}-dialog {
-                width: 300px;
+                min-width: 300px;
+                width: 94%;
             }
         }
     }

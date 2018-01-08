@@ -2,32 +2,31 @@
     background: #ffffff;
     clip-path: polygon(0 8vw, 100% 0, 100% 100%, 0 100%);
     margin-top: -8vw;
+    padding-bottom: rem(25px);
     position: relative;
     overflow: hidden;
 
     &__header {
-        top: 0;
-        left: 0;
-        right: 0;
-        position: absolute;
         background: rgba(255, 255, 255, 0.5);
-        padding-top: 8vw;
         z-index: 1;
         text-align: center;
+        position: relative;
+        padding: calc(8vw + 15px) 0 rem(20px);
+        margin-bottom: rem(30px);
     }
 
     &__title {
         text-transform: uppercase;
-        margin-bottom: 48px;
+        margin-bottom: rem(20px);
     }
 
     &__tabs {
-        margin-bottom: 30px;
+        white-space: nowrap;
 
         &__item {
             border-radius: 4px;
-            margin: 10px 25px;
-            min-width: 200px;
+            margin: rem(10px) rem(25px);
+            min-width: rem(200px);
             letter-spacing: 0.3px;
             box-shadow: inset 0 0 0 1px #dddddd;
             background: #ffffff;
@@ -38,7 +37,7 @@
                 box-shadow: inset 0 0 0 1px #dddddd;
             }
 
-            &.--active {
+            &.status_active {
                 color: #ffffff;
                 cursor: default;
                 box-shadow: none;
@@ -46,27 +45,42 @@
             }
         }
     }
-}
 
-@media (max-width: 991px) {
-    .section-points {
-        &__header {
-            padding: 10vw 0 0;
-        }
+    &.map_show {
+        height: 100vh;
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $screen-sm-max) {
     .section-points {
-        &__title {
-            @include font-size(45px);
-            margin-bottom: 20px;
+        &__header {
+            margin-bottom: rem(20px);
         }
 
         &__tabs {
             &__item {
-                min-width: 180px;
+                margin: rem(10px);
+                min-width: rem(160px);
             }
         }
+    }
+}
+
+
+@supports (-ms-ime-align:auto) {
+    .section-points {
+        margin-top: 0;
+        padding-bottom: rem(50px);
+
+        &__header {
+            padding-top: rem(50px);
+        }
+    }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .section-points {
+        margin-top: 0;
+        padding: rem(50px) 0;
     }
 }

@@ -162,7 +162,7 @@ if (class_exists('MultiPostThumbnails')) {
      */
     new MultiPostThumbnails(
         array(
-            'label' => __('Featured Image Small', 'mch_localization'),
+            'label' => __('Миниатюра записи', 'mch_localization'),
             'id' => 'logo-small',
             'post_type' => 'points'
         )

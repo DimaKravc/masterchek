@@ -4,7 +4,7 @@
     top: 0;
     left: 0;
     right: 0;
-    margin: 35px auto;
+    margin: rem(32px) auto;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -12,24 +12,14 @@
 
     &__divider {
         width: 1px;
-        height: 35px;
+        height: rem(35px);
         background: #f7e0bd;
-        margin: 0 22px;
+        margin: 0 rem(20px);
     }
 }
 
 .admin-bar .site-header {
     top: 32px;
-}
-
-@media (max-width: 991px) {
-    .site-header {
-        margin: 30px auto;
-
-        &__devider {
-            margin: 0 20px;
-        }
-    }
 }
 
 @media (max-width: 782px) {
@@ -38,13 +28,9 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $screen-sm-max) {
     .site-header {
-        margin: 20px auto;
-        justify-content: space-between;
-
-        &__divider {
-            display: none;
-        }
+        margin: rem(20px) auto;
+        justify-content: center;
     }
 }

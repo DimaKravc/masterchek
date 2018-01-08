@@ -15,9 +15,9 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta content="IE=edge" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="theme-color" content="#e53430">
-    <meta name="msapplication-navbutton-color" content="#e53430">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#e53430">
+    <meta name="theme-color" content="#da8721">
+    <meta name="msapplication-navbutton-color" content="#da8721">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#da8721">
     <?php wp_site_icon(); ?>
     <?php wp_head(); ?>
 </head>
@@ -25,7 +25,6 @@
 <body <?php body_class(); ?>>
 <?php get_template_part('template-parts/loader'); ?>
 <header class="site-header container">
-    <?php get_template_part('template-parts/header-mobile') ?>
     <?php wp_nav_menu(array(
         'theme_location' => 'header',
         'container' => 'nav',

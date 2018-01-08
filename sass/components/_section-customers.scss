@@ -1,10 +1,10 @@
 .section-customers {
     background: url("images/section-customers-bg.jpg") no-repeat center/cover;
-    padding: 30px 0;
+    padding: rem(25px) 0;
 
     &__header {
         text-align: center;
-        margin-bottom: 30px;
+        margin-bottom: rem(30px);
     }
 
     &__title {
@@ -13,18 +13,18 @@
     }
 
     &__carousel {
-        padding: 0 50px;
+        padding: 0 rem(75px);
 
         * {
             -webkit-backface-visibility: hidden;
         }
 
         .owl-stage-outer {
-            margin-bottom: 28px;
+            margin-bottom: rem(28px);
         }
 
         .owl-item {
-            height: 135px;
+            height: rem(90px);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -40,9 +40,9 @@
             justify-content: center;
 
             .owl-dot {
-                margin: 0 3px;
-                width: 10px;
-                height: 10px;
+                margin: 0 rem(3px);
+                width: rem(10px);
+                height: rem(10px);
                 border-radius: 50%;
                 background: #ffffff;
                 transition: all .2s ease;
@@ -59,14 +59,10 @@
     @include clearfix();
 }
 
-@media (max-width: 767px) {
+@media (max-width: $screen-sm-max) {
     .section-customers {
-        &__header {
-            margin-bottom: 20px;
-        }
-
         &__title {
-            @include font-size(45px);
+            font-size: rem(40px);
         }
     }
 }

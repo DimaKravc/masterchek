@@ -2,7 +2,7 @@
     background: url("images/section-contacts-bg.jpg") no-repeat center/cover;
 
     &__top {
-        padding: 30px 0;
+        padding: rem(25px) 0;
 
         & + .section-contacts__bottom {
             &:before {
@@ -19,11 +19,11 @@
 
     &__bottom {
         position: relative;
-        padding: 25px 0;
+        padding: rem(20px) 0;
     }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: $screen-lg-min) {
     .section-contacts {
         .container {
             width: 960px;

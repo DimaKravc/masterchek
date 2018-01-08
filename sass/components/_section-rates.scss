@@ -2,11 +2,11 @@
     background: url("images/slide-bg-3.jpg") no-repeat center/cover;
     clip-path: polygon(0 8vw, 100% 0, 100% 100%, 0 100%);
     margin-top: -8vw;
-    padding: 8vw 0 9vw;
+    padding: calc(8vw + 15px) 0;
 
     &__header {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: rem(20px);
         color: #ffffff;
     }
 
@@ -17,29 +17,37 @@
 
     &__subtitle {
         text-transform: uppercase;
-        @include font-size(17px);
+        font-size: rem(14px);
+        font-weight: $font-weight-bold;
     }
 
     &__footer {
         text-align: center;
-        margin-bottom: 20px;
     }
 }
 
-@media (max-width: 991px) {
-    .section-rates {
-        padding: 12vw 0;
-    }
-}
-
-@media (max-width: 767px) {
+@media (max-width: $screen-sm-max) {
     .section-rates {
         &__title {
-            @include font-size(45px);
+            font-size: rem(40px);
         }
 
         &__subtitle {
-            @include font-size(15px);
+            font-size: rem(13px);
         }
+    }
+}
+
+@supports (-ms-ime-align:auto) {
+    .section-rates {
+        margin-top: 0;
+        padding: rem(50px) 0;
+    }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .section-rates {
+        margin-top: 0;
+        padding: rem(50px) 0;
     }
 }

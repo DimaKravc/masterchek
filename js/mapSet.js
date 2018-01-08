@@ -2,7 +2,7 @@
 
 var map,
     allMarkers = [],
-    infoBox;
+    infoBoxContainer;
 
 function initMap() {
     if (typeof mapSettings === 'undefined') return;
@@ -12,7 +12,7 @@ function initMap() {
         zoom: mapSettings.zoom,
         disableDefaultUI: true
     });
-    infoBox = document.getElementById('info-box-container');
+    infoBoxContainer = document.getElementById('info-box-container');
 
     setMarkers();
 
@@ -35,6 +35,8 @@ function setMarkers() {
             animation: google.maps.Animation.DROP
         });
 
+        var infoBox = document.getElementById('info-box-' + point.id);
+
         allMarkers.push(marker);
 
         marker.addListener('click', function () {
@@ -43,21 +45,21 @@ function setMarkers() {
 
             toggleBounce(curPoint);
             
-            if (!infoBox) return;
-
             resetInfoBox();
+
+            if (!infoBoxContainer || !infoBox) return;
 
             if (!isActive) {
                 this.showInfo = true;
 
                 updateContentInfoBox(curPoint);
-                updatePosInfoBox(curPoint, infoBox);
+                updatePosInfoBox(curPoint, infoBoxContainer);
 
-                infoBox.style.visibility = 'visible';
-                infoBox.style.opacity = 1;
+                infoBoxContainer.style.visibility = 'visible';
+                infoBoxContainer.style.opacity = 1;
 
                 map.addListener('center_changed', function () {
-                    updatePosInfoBox(curPoint, infoBox);
+                    updatePosInfoBox(curPoint, infoBoxContainer);
                 })
             }
         });
@@ -69,11 +71,11 @@ function setMarkers() {
     // });
     map.addListener('zoom_changed', function () {
         resetBounce();
-        if (infoBox) resetInfoBox();
+        if (infoBoxContainer) resetInfoBox();
     });
     google.maps.event.addDomListener(map, 'click', function () {
         resetBounce();
-        if (infoBox) resetInfoBox();
+        if (infoBoxContainer) resetInfoBox();
     });
 }
 
@@ -95,21 +97,21 @@ function toggleBounce(marker) {
 }
 
 function resetInfoBox() {
-    infoBox.style.visibility = 'hidden';
-    infoBox.style.opacity = 0;
+    infoBoxContainer.style.visibility = 'hidden';
+    infoBoxContainer.style.opacity = 0;
     allMarkers.forEach(function (marker) {
         marker.showInfo = false;
     });
 }
 
 function updateContentInfoBox(point) {
-    infoBox.innerHTML = document.getElementById('info-box-' + point.id).innerHTML
+    infoBoxContainer.innerHTML = document.getElementById('info-box-' + point.id).innerHTML
 }
 
-function updatePosInfoBox(point, infoBox) {
+function updatePosInfoBox(point, infoBoxContainer) {
     var pointPos = fromLatLngToPoint(point.getPosition(), map);
-    infoBox.style.left = pointPos.x + 'px';
-    infoBox.style.top = pointPos.y + 'px';
+    infoBoxContainer.style.left = pointPos.x + 'px';
+    infoBoxContainer.style.top = pointPos.y + 'px';
 }
 
 function fromLatLngToPoint(latLng, map) {

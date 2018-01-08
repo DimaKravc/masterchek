@@ -4,8 +4,8 @@
     text-align: center;
     text-transform: uppercase;
     color: #ffffff;
-    @include font-size(14px);
-    letter-spacing: -0.1px;
+    font-size: rem(14px);
+    letter-spacing: -0.25px;
     text-decoration: none;
     vertical-align: middle;
     cursor: pointer;
@@ -15,12 +15,12 @@
     outline: none;
     white-space: nowrap;
     user-select: none;
-    padding: 0 30px;
+    padding: 0 rem(25px);
     border-radius: 50px;
-    height: 46px;
-    line-height: 46px;
+    height: rem(43px);
+    line-height: rem(43px);
     transition: background .2s, box-shadow .2s, opacity .2s;
-    min-width: 260px;
+    min-width: rem(240px);
 
     &:hover {
         box-shadow: 0 4px 12px rgba(222, 27, 61, 0.4);
@@ -38,13 +38,5 @@
 
     &[disabled] {
         opacity: .55;
-    }
-}
-
-@media (max-width: 991px) {
-    .button {
-        height: 44px;
-        line-height: 44px;
-        min-width: 250px;
     }
 }

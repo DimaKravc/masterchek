@@ -127,7 +127,7 @@ msgstr "Api ключ"
 
 #: inc/mch-meta-boxes.php:180
 msgid "Zoom"
-msgstr "Приблежение"
+msgstr "Приближение"
 
 #: inc/mch-meta-boxes.php:202
 msgid "Phone"

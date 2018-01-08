@@ -15,21 +15,21 @@ foreach ($posts_array as $post) :
                 <ul class="list-contacts">
                     <?php if ($email_address): ?>
                         <li class="list-contacts__item">
-                            <span class="list-contacts__item__icon --mail"></span>
+                            <span class="list-contacts__item__icon mail"></span>
                             <a href="mailto:<?php echo esc_attr($email_address); ?>"
                                class="list-contacts__item__data"><?php echo esc_html($email_address); ?></a>
                         </li>
                     <?php endif; ?>
                     <?php if ($phone_number): ?>
                         <li class="list-contacts__item">
-                            <span class="list-contacts__item__icon --phone"></span>
-                            <a href="tel:<?php echo esc_attr(preg_replace('/[^\d]/', '', $phone_number)) ?>"
+                            <span class="list-contacts__item__icon phone"></span>
+                            <a href="tel:+<?php echo esc_attr(preg_replace('/[^\d]/', '', $phone_number)) ?>"
                                class="list-contacts__item__data">тел: <?php echo esc_html($phone_number); ?></a>
                         </li>
                     <?php endif; ?>
                     <?php if ($wh_start && $wh_end): ?>
                         <li class="list-contacts__item">
-                            <span class="list-contacts__item__icon --clock"></span>
+                            <span class="list-contacts__item__icon clock"></span>
                             <p class="list-contacts__item__data"><?php echo 'с ' . esc_html($wh_start) . ' до ' . esc_html($wh_end); ?></p>
                         </li>
                     <?php endif; ?>
@@ -39,17 +39,17 @@ foreach ($posts_array as $post) :
                 <ul class="list-socials">
                     <?php if ($instagram_profile): ?>
                         <li class="list-socials__item">
-                            <a class="list-socials__item__profile --in" href="https://www.instagram.com/<?php echo esc_attr($instagram_profile)?>/?hl=ru" target="_blank"></a>
+                            <a class="list-socials__item__profile in" href="https://www.instagram.com/<?php echo esc_attr($instagram_profile)?>/?hl=ru" target="_blank"></a>
                         </li>
                     <?php endif; ?>
                     <?php if ($facebook_profile): ?>
                         <li class="list-socials__item">
-                            <a class="list-socials__item__profile --fb" href="https://www.facebook.com/<?php echo esc_attr($facebook_profile)?>/" target="_blank"></a>
+                            <a class="list-socials__item__profile fb" href="https://www.facebook.com/<?php echo esc_attr($facebook_profile)?>/" target="_blank"></a>
                         </li>
                     <?php endif; ?>
                     <?php if ($telegram): ?>
                         <li class="list-socials__item">
-                            <a class="list-socials__item__profile --tg" href="https://telegram.me/<?php echo esc_attr($telegram)?>" target="_blank"></a>
+                            <a class="list-socials__item__profile tg" href="https://telegram.me/<?php echo esc_attr($telegram)?>" target="_blank"></a>
                         </li>
                     <?php endif; ?>
                 </ul>

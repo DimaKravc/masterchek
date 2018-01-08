@@ -1,6 +1,6 @@
 .form {
     &__group {
-        margin-bottom: 35px;
+        margin-bottom: rem(32px);
         position: relative;
 
         &:before {
@@ -17,29 +17,42 @@
 
         label {
             display: block;
-            @include font-size(15.24px);
+            font-size: rem(15.24px);
             color: #333333;
             transition: color .2s ease-in;
         }
 
         input {
+            font-size: rem(14px);
             display: block;
             width: 100%;
             border: none;
             border-bottom: 1px solid rgba(51, 51, 51, 0.50);
-            height: 28px;
+            height: rem(26px);
+
+            &:required{
+                &:invalid {
+                    outline: none;
+                }
+            }
         }
 
         textarea {
             display: block;
-            margin-top: 16px;
+            margin-top: rem(16px);
             resize: none;
             border: 1px solid rgba(51, 51, 51, 0.50);
             border-radius: 3px;
             width: 100%;
-            min-height: 140px;
-            padding: 6px 10px;
+            min-height: rem(130px);
+            padding: rem(6px) rem(10px);
             transition: border-color .2s ease-in;
+
+            &:required{
+                &:invalid {
+                    outline: none;
+                }
+            }
         }
 
         .ui-selectmenu-button {
@@ -47,9 +60,9 @@
             text-transform: uppercase;
             width: auto !important;
             display: inline-block;
-            height: 28px;
-            line-height: 28px;
-            margin-top: 16px;
+            height: rem(28px);
+            line-height: rem(28px);
+            margin-top: rem(10px);
         }
 
         &.--input-focused,
@@ -78,16 +91,20 @@
                 border-color: $color-accent;
             }
         }
+
+        &.--select {
+            margin-bottom: rem(18px);
+        }
     }
 
     &__success-tooltip,
     &__error-tooltip {
-        margin: 25px 0 0;
-        padding: 12px;
+        margin: rem(25px) 0 0;
+        padding: rem(12px);
         border: 1px solid;
         border-radius: 3px;
         text-align: center;
-        font-size: 14px;
+        font-size: rem(14px);
         user-select: none;
     }
 
@@ -100,22 +117,6 @@
     }
 
     .form-submit {
-        margin: 40px 0;
-    }
-}
-
-@media (max-width: 991px) {
-    .form {
-        &__group {
-            margin-bottom: 30px;
-        }
-    }
-}
-
-@media (max-width: 575px) {
-    .form {
-        &__group {
-            margin-bottom: 25px;
-        }
+        margin: rem(40px) 0;
     }
 }

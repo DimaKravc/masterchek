@@ -19,7 +19,7 @@ if (!function_exists('mch_register_post_types')):
             'has_archive' => true,
             'menu_icon' => get_stylesheet_directory_uri() . '/images/icon-masterchek.png',
             'menu_position' => 30,
-            'supports' => array('editor')
+            'supports' => array('title', 'editor')
         ));
 
         register_post_type('offers', array(
@@ -36,7 +36,7 @@ if (!function_exists('mch_register_post_types')):
             'has_archive' => true,
             'menu_icon' => get_stylesheet_directory_uri() . '/images/icon-masterchek.png',
             'menu_position' => 31,
-            'supports' => array('editor', 'editor')
+            'supports' => array('title', 'editor')
         ));
 
         register_post_type('achievements', array(
@@ -87,7 +87,7 @@ if (!function_exists('mch_register_post_types')):
             'has_archive' => true,
             'menu_icon' => get_stylesheet_directory_uri() . '/images/icon-masterchek.png',
             'menu_position' => 34,
-            'supports' => array('title')
+            'supports' => array('')
         ));
 
         register_post_type('customers', array(
@@ -121,7 +121,7 @@ if (!function_exists('mch_register_post_types')):
             'has_archive' => true,
             'menu_icon' => get_stylesheet_directory_uri() . '/images/icon-masterchek.png',
             'menu_position' => 36,
-            'supports' => array('title')
+            'supports' => array('')
         ));
     }
 endif;

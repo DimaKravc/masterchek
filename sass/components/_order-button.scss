@@ -1,28 +1,21 @@
 .order-button {
-    @include font-size(14px);
-    font-weight: $font-weight-bold;
-    background: transparent;
-    box-shadow: 0 11px 25px 0 rgba(0, 0, 0, 0.28);
-    border: 1px solid #ffffff;
-    min-width: 180px;
-    height: 33px;
-    line-height: 32px;
-
-    &:hover {
-        box-shadow: 0 13px 29px 0 rgba(0, 0, 0, 0.30);
-    }
+    display: none;
 }
 
-@media (max-width: 991px) {
+@media (min-width: 0) {
     .order-button {
-        min-width: 170px;
-        height: 30px;
-        line-height: 30px;
-    }
-}
+        display: inline-block;
+        font-size: rem(12px);
+        font-weight: $font-weight-bold;
+        background: transparent;
+        box-shadow: 0 rem(11px) rem(25px) 0 rgba(0, 0, 0, 0.28);
+        border: 1px solid #ffffff;
+        min-width: rem(174px);
+        height: rem(31px);
+        line-height: rem(30px);
 
-@media (max-width: 767px) {
-    .order-button {
-        display: none;
+        &:hover {
+            box-shadow: 0 rem(13px) rem(29px) 0 rgba(0, 0, 0, 0.30);
+        }
     }
 }

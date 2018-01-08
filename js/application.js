@@ -110,7 +110,7 @@ jQuery(document).ready(function ($) {
             var event = new Event('change.tabs');
 
             $entries.each(function (index, item) {
-                if (!$('[data-tab="' + this.dataset.id + '"]').hasClass('--active')) {
+                if (!$('[data-tab="' + this.dataset.id + '"]').hasClass('status_active')) {
                     $(item).hide();
                 }
             });
@@ -118,16 +118,21 @@ jQuery(document).ready(function ($) {
             $tabs.on('click', function () {
                 var $this = $(this);
 
-                if (!$this.hasClass('--active')) {
+                if (!$this.hasClass('status_active')) {
                     // Tab classes update
-                    $tabs.removeClass('--active');
-                    $this.addClass('--active');
+                    $tabs.removeClass('status_active');
+                    $this.addClass('status_active');
 
                     // Entry update
                     $entries.hide();
                     $('[data-id="' + this.dataset.tab + '"]').show(0, function () {
                         if ($(this).find('#map').length) {
+                            $(this).closest('.section-points').addClass('map_show')
                             document.dispatchEvent(event);
+                        } else {
+                            if ($(this).closest('.section-points').length) {
+                                $(this).closest('.section-points').removeClass('map_show')
+                            }
                         }
                     });
                 }
@@ -165,21 +170,6 @@ jQuery(document).ready(function ($) {
                     }
                 }
             });
-        },
-        mobileMenu: function () {
-            var $menu = $('[data-js="mob-menu"]');
-
-            $('[data-js="open-mob-menu"]').on('click', function () {
-                $menu.addClass('--show');
-            });
-
-            $('[data-js="close-mob-menu"]').on('click', function () {
-                $menu.removeClass('--show');
-            });
-
-            $(window).on('resize', function () {
-                $menu.removeClass('--show');
-            })
         },
         inputFocus: function () {
             $('[data-js="input"]').focusin(

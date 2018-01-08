@@ -2,11 +2,19 @@
     background: url("images/slide-bg-5.jpg") no-repeat top center/cover;
     clip-path: polygon(0 8vw, 100% 0, 100% 100%, 0 100%);
     margin-top: -8vw;
-    padding: 8vw 0 9vw;
+    padding: calc(8vw + 15px) 0;
 }
 
-@media (max-width: 991px) {
+@supports (-ms-ime-align:auto) {
     .section-achievements {
-        padding: 12vw 0;
+        margin-top: 0;
+        padding: rem(50px) 0;
+    }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .section-achievements {
+        margin-top: 0;
+        padding: rem(50px) 0;
     }
 }

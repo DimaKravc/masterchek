@@ -25,26 +25,13 @@
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $screen-sm-max) {
     .site-footer {
-        padding: 5px 0 20px;
+        padding: rem(10px);
         flex-direction: column-reverse;
 
         .site-nav {
-            margin-bottom: 15px;
-
-            .menu {
-                flex-direction: column;
-
-                .menu-item {
-                    text-align: center;
-
-                    a {
-                        height: 35px;
-                        line-height: 35px;
-                    }
-                }
-            }
+            display: none;
         }
     }
 }

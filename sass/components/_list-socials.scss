@@ -12,16 +12,16 @@
             height: 33px;
             display: block;
 
-            &.--in {
-                background: url("images/icon-in.png") no-repeat center/cover;
+            &.in {
+                background: url("images/icon-in.svg") no-repeat center/cover;
             }
 
-            &.--fb {
-                background: url("images/icon-fb.png") no-repeat center/cover;
+            &.fb {
+                background: url("images/icon-fb.svg") no-repeat center/cover;
             }
 
-            &.--tg {
-                background: url("images/icon-tg.png") no-repeat center/cover;
+            &.tg {
+                background: url("images/icon-tg.svg") no-repeat center/cover;
             }
         }
     }

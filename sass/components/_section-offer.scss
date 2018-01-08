@@ -2,11 +2,11 @@
     background: url("images/slide-bg-4.jpg") no-repeat center/cover;
     clip-path: polygon(0 8vw, 100% 0, 100% 100%, 0 100%);
     margin-top: -8vw;
-    padding: 8vw 0;
+    padding: calc(8vw + 15px) 0 8vw;
 
     &__header {
         text-align: center;
-        margin-bottom: 3vw;
+        margin-bottom: rem(40px);
     }
 
     &__title {
@@ -16,15 +16,23 @@
 
     &__subtitle {
         text-transform: uppercase;
-        @include font-size(17px);
+        font-size: rem(14px);
         font-weight: $font-weight-bold;
     }
 
     &__carousel {
-        padding: 0 75px;
+        padding: 0 rem(60px);
 
         * {
             -webkit-backface-visibility: hidden;
+        }
+
+        .owl-item {
+            img {
+                margin: auto;
+                width: auto;
+                max-height: 450px;
+            }
         }
 
         .owl-nav {
@@ -82,14 +90,14 @@
         }
 
         .owl-dots {
-            margin: 20px 0;
+            margin: rem(25px) 0;
             display: flex;
             justify-content: center;
 
             .owl-dot {
-                margin: 0 3px;
-                width: 12px;
-                height: 12px;
+                margin: 0 rem(3px);
+                width: rem(12px);
+                height: rem(12px);
                 border-radius: 50%;
                 background: $color-accent;
                 transition: all .2s ease;
@@ -108,32 +116,34 @@
     @include clearfix();
 }
 
-@media (max-width: 991px) {
-    .section-offer {
-        padding: 12vw 0;
-
-        &__carousel {
-            padding: 0 30px;
-        }
-    }
-}
-
-@media (max-width: 767px) {
+@media (max-width: $screen-sm-max) {
     .section-offer {
         &__title {
-            @include font-size(45px);
+            font-size: rem(40px);
         }
 
         &__subtitle {
-            @include font-size(15px);
+            font-size: rem(13px);
         }
 
         &__carousel {
-            padding: 0;
-
             .owl-nav {
                 display: none;
             }
         }
+    }
+}
+
+@supports (-ms-ime-align:auto) {
+    .section-offer {
+        margin-top: 0;
+        padding: rem(50px) 0;
+    }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .section-offer {
+        margin-top: 0;
+        padding: rem(50px) 0;
     }
 }
