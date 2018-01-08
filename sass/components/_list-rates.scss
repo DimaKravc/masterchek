@@ -110,9 +110,14 @@
 @media (max-width: $screen-sm-max) {
     .list-rates {
         &__item {
+            margin-bottom: 0;
             $this: &;
 
             width: 100%;
+
+            &__size {
+                font-size: rem(75px);
+            }
 
             &__check {
                 display: none;

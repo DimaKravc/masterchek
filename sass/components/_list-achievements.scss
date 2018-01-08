@@ -101,6 +101,26 @@
             &:not(:last-child) {
                 margin-bottom: rem(30px);
             }
+
+            .smile-icon,
+            .like-icon {
+                width: 45px;
+                height: 45px;
+            }
+
+            .web-icon {
+                width: 55px;
+                height: 47px;
+            }
+
+            &__amount {
+                font-size: rem(30px);
+                margin: rem(12px) 0;
+            }
+
+            &__text {
+                margin: rem(16px) 0;
+            }
         }
     }
 }
