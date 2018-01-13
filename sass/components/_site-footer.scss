@@ -15,8 +15,7 @@
                 a {
                     color: #f6720e;
 
-                    &:hover,
-                    &.--active {
+                    &:hover {
                         color: $color-accent;
                     }
                 }

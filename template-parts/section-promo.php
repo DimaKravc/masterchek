@@ -1,4 +1,4 @@
-<section class="section-promo">
+<section class="section-promo" id="promo">
     <div class="container">
         <div class="section-promo__col">
             <div class="section-promo__logo">
@@ -8,8 +8,8 @@
             <p class="section-promo__text">Рекламное агентство MasterCheck предлагает вам инновационный маркетинговый
                 концепт,
                 нововведение, являющееся уникальным по всей Республике Узбекистан.</p>
-            <button class="button --light section-promo__button" data-toggle="modal" data-target="#advicePopup">получить консультацию</button>
-            <?php get_template_part('template-parts/popup-advice-form'); ?>
+            <button class="button --light section-promo__button" data-toggle="modal" data-target="#adviceModal">получить консультацию</button>
+            <?php get_template_part('template-parts/modal-advice-form'); ?>
         </div>
     </div>
 </section>

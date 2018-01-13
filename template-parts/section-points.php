@@ -6,7 +6,7 @@ if (!empty($posts_array)): ?>
         <div class="section-points__header">
             <h2 class="section-points__title">наши точки</h2>
             <div class="section-points__tabs">
-                <button class="section-points__tabs__item button status_active" data-tab="#point-1">список</button>
+                <button class="section-points__tabs__item button active" data-tab="#point-1">список</button>
                 <button class="section-points__tabs__item button" data-tab="#point-2">на карте</button>
             </div>
         </div>

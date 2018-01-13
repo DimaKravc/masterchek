@@ -16,6 +16,11 @@
 
         &:hover {
             box-shadow: 0 rem(13px) rem(29px) 0 rgba(0, 0, 0, 0.30);
+            color: #ffffff;
+        }
+
+        &:focus {
+            color: #ffffff;
         }
     }
 }

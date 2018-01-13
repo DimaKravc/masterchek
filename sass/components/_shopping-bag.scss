@@ -3,6 +3,7 @@
     align-items: center;
     @include font-size(12px);
     font-weight: $font-weight-bold;
+    cursor: pointer;
 
     &__icon {
         width: 22px;

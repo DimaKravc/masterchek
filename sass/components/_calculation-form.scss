@@ -2,18 +2,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 75px 60px;
+    margin: 0 rem(60px) rem(45px);
 
     &__item {
         width: 30%;
-        margin-bottom: 55px;
+        margin-bottom: rem(45px);
 
         &.--place {
             .ui-selectmenu-button {
                 color: #c34031;
 
                 .ui-icon {
-                    background: url("images/icon-arrow-bottom-red.png") no-repeat center/cover;
+                    background-image: url("data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTguMS4xLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDMxNC41IDMxNC41IiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMTQuNSAzMTQuNTsiIHhtbDpzcGFjZT0icHJlc2VydmUiIHdpZHRoPSIxNnB4IiBoZWlnaHQ9IjE2cHgiPgo8Zz4KCTxnPgoJCTxwYXRoIGQ9Ik0zMTQuNSw5MC41YzAsNi0yLDEzLTcsMThsLTEzMywxMzNjLTUsNS0xMCw3LTE3LDdzLTEyLTItMTctN2wtMTMzLTEzM2MtMTAtMTAtMTAtMjUsMC0zNSAgICBzMjQtMTAsMzQsMGwxMTYsMTE2bDExNi0xMTZjMTAtMTAsMjQtMTAsMzQsMEMzMTIuNSw3OC41LDMxNC41LDg0LjUsMzE0LjUsOTAuNXoiIGZpbGw9IiNjMzQwMzEiLz4KCTwvZz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K");
                 }
             }
         }
@@ -25,27 +25,32 @@
 
     label {
         display: block;
-        margin-bottom: 25px;
-        @include font-size(18.5px);
+        margin-bottom: rem(20px);
+        font-size: rem(17px);
     }
 
-    .ui-selectmenu-button {
-        @include font-size(30px);
-        width: auto !important;
-        display: inline-block;
+    .ui-selectmenu {
+        &-button {
+            width: auto !important;
+            display: inline-block;
+        }
+
+        &-text {
+            font-size: rem(27px);
+        }
     }
 
     &__checkboxes-wrap {
         display: flex;
-        padding: 10px 0;
+        padding: rem(10px) 0;
 
         label {
-            margin: 0 28px 0 0;
+            margin: 0 rem(25px) 0 0;
         }
     }
 
     &__total {
-        @include font-size(30px);
+        font-size: rem(28px);
         color: #f15f18;
         border-bottom: 1px solid #e4e4e4;
         display: block;

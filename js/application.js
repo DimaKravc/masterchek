@@ -40,6 +40,19 @@ jQuery(document).ready(function ($) {
         selectMenu: function () {
             $('[data-js="select"]').selectmenu();
         },
+        goTo: function () {
+            var $linkTo = $('a[href^="#"]');
+            $linkTo.on('click', function (event) {
+                event.preventDefault();
+
+                var offset = $.attr(this, 'href') === '#rates' && $(window).width() < 1400 ? 90 : 0
+
+
+                $('html, body').animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top + offset
+                }, 500);
+            })
+        },
         slider: function () {
             $('[data-js="period-range-slider"]').jRange({
                 width: '300',
@@ -112,7 +125,7 @@ jQuery(document).ready(function ($) {
             var event = new Event('change.tabs');
 
             $entries.each(function (index, item) {
-                if (!$('[data-tab="' + this.dataset.id + '"]').hasClass('status_active')) {
+                if (!$('[data-tab="' + this.dataset.id + '"]').hasClass('active')) {
                     $(item).hide();
                 }
             });
@@ -120,10 +133,10 @@ jQuery(document).ready(function ($) {
             $tabs.on('click', function () {
                 var $this = $(this);
 
-                if (!$this.hasClass('status_active')) {
+                if (!$this.hasClass('active')) {
                     // Tab classes update
-                    $tabs.removeClass('status_active');
-                    $this.addClass('status_active');
+                    $tabs.removeClass('active');
+                    $this.addClass('active');
 
                     // Entry update
                     $entries.hide();

@@ -28,8 +28,7 @@
                     -webkit-tap-highlight-color: transparent;
                     user-select: none;
 
-                    &:hover,
-                    &.--active {
+                    &:hover {
                         color: hsla(0, 0%, 100%, .5);
                     }
                 }

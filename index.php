@@ -21,6 +21,6 @@
 <?php get_template_part('template-parts/section', 'achievements'); ?>
 <?php get_template_part('template-parts/section', 'points'); ?>
 <?php get_template_part('template-parts/section', 'customers'); ?>
-<?php //get_template_part('template-parts/section', 'calculator'); ?>
+<?php get_template_part('template-parts/section', 'calculator'); ?>
 <?php get_template_part('template-parts/section', 'contacts'); ?>
 <?php get_footer(); ?>

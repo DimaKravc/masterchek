@@ -1,4 +1,4 @@
-<section class="section-rates">
+<section class="section-rates" id="rates">
     <div class="container">
         <div class="section-rates__header">
             <h2 class="section-rates__title">Тарифные планы</h2>

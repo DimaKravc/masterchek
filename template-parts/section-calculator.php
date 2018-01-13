@@ -1,12 +1,12 @@
-<section class="section-calculator">
+<section id="calculator" class="section-calculator">
     <div class="container">
         <div class="section-calculator__header">
             <h2 class="section-calculator__title">Калькулятор</h2>
             <b class="section-calculator__subtitle">вы можете выбрать и рассчитать самы выгодный пакет</b>
         </div>
-        <pre>
+        <!--<pre>
             <?php
-            //$query = new WP_Query( array('tax_query' => array(37,47)) );
+/*            //$query = new WP_Query( array('tax_query' => array(37,47)) );
             //print_r($query);
             //print_r(get_post_taxonomies(223));
             //print_r(wp_get_post_terms(223, 'wpsc-variation'));
@@ -22,8 +22,8 @@
 //            );
 //            $children = get_children( $args );
 //            print_r($children)
-            ?>
-        </pre>
+            */?>
+        </pre>-->
         <div class="calculation-form">
             <div class="calculation-form__item --place">
                 <label for="place-of-distribution">Место распростронения</label>

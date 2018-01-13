@@ -9,7 +9,7 @@ foreach ($posts_array as $post) :
     $facebook_profile = !empty($meta_data['_meta-socials-fb'][0]) ? $meta_data['_meta-socials-fb'][0] : '';
     $telegram = !empty($meta_data['_meta-socials-tg'][0]) ? $meta_data['_meta-socials-tg'][0] : '' ?>
 
-    <section class="section-contacts">
+    <section class="section-contacts" id="contacts">
         <div class="container">
             <div class="section-contacts__top">
                 <ul class="list-contacts">

@@ -4,7 +4,7 @@
 
     &__header {
         text-align: center;
-        margin-bottom: 5vw;
+        margin-bottom: rem(40px);
     }
 
     &__title {
@@ -14,32 +14,24 @@
 
     &__subtitle {
         text-transform: uppercase;
-        @include font-size(17px);
+        font-size: rem(14px);
         font-weight: $font-weight-bold;
     }
 
     &__footer {
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: rem(15px);
     }
 }
 
-@media (max-width: 767px) {
-    .section-calculator {
+@media (max-width: $screen-sm-max) {
+    .section-advantages {
         &__title {
-            @include font-size(45px);
+            font-size: rem(40px);
         }
 
         &__subtitle {
-            @include font-size(15px);
-        }
-
-        &__carousel {
-            padding: 0;
-
-            .owl-nav {
-                display: none;
-            }
+            font-size: rem(13px);
         }
     }
 }
