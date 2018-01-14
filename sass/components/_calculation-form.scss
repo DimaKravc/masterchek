@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 0 rem(60px) rem(45px);
+    margin: 0 rem(60px) rem(30px);
 
     &__item {
         width: 30%;
@@ -18,7 +18,7 @@
             }
         }
 
-        &.--total {
+        &.total {
             text-align: right;
         }
     }
@@ -57,20 +57,127 @@
         padding-bottom: 5px;
     }
 
-    .period-range-slider {
-        margin: -8px 0 15px;
+    .period-slider {
+        margin: rem(-8px) 0 rem(15px);
 
-        label {
-            @include font-size(30px);
+        &__view {
+            display: block;
+            font-size: rem(25px);
             color: #c34031;
-            margin-bottom: 10px;
+            margin-bottom: rem(15px);
+        }
+
+        &__inner {
+            position: relative;
+
+            &:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                background: #c34031;
+                z-index: 1;
+            }
+
+            &[data-step="1"] {
+                &:before {
+                    width: 0;
+                }
+            }
+
+            &[data-step="2"] {
+                &:before {
+                    width: 33.3333%;
+                }
+
+                .round1 {
+                    background: #c34031;
+                }
+            }
+
+            &[data-step="3"] {
+                &:before {
+                    width: 66.6667%;
+                }
+
+                .round1 {
+                    background: #c34031;
+                }
+
+                .round2 {
+                    background: #c34031;
+                }
+            }
+
+            &[data-step="4"] {
+                &:before {
+                    width: 100%;
+                }
+
+                [class^="round"] {
+                    background: #c34031;
+                }
+            }
+        }
+
+        [class^="round"] {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            left: 0;
+            top: 50%;
+            margin-top: -5px;
+            margin-left: -5px;
+            background: #e4e4e4;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .round2 {
+            left: 33.3333%;
+        }
+
+        .round3 {
+            left: 66.6667%;
+        }
+
+        .round4 {
+            left: 100%;
+        }
+
+        .ui-slider {
+            border: none;
+            height: 4px;
+            background: #e4e4e4;
+
+            .ui-slider-handle {
+                border: 4px solid #e4e4e4;
+                border-radius: 50%;
+                background: #c34031;
+                font-weight: normal;
+                cursor: pointer;
+                outline: none;
+                width: 18px;
+                height: 18px;
+                top: 50%;
+                margin-top: -9px;
+                margin-left: -9px;
+                transition: border-width .13s ease;
+
+                &.ui-state-hover,
+                &.ui-state-active {
+                    border-width: 2px;
+                }
+            }
         }
     }
 }
 
-@media (max-width: 1299px) {
+@media (max-width: $screen-lg-max) {
     .calculation-form {
-        margin: 0 0 50px;
+        justify-content: space-around;
 
         &__item {
             width: 35%;
@@ -78,20 +185,26 @@
     }
 }
 
-@media (max-width: 991px) {
+@media (max-width: $screen-md-max) {
     .calculation-form {
+        margin: 0 0 rem(30px);
+
+        label {
+            margin-bottom: rem(10px);
+        }
+
         &__item {
-            margin-bottom: 30px;
-            width: 42%;
+            margin-bottom: rem(25px);
         }
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: $screen-sm-max) {
     .calculation-form {
         &__item {
-            margin-bottom: 25px;
-            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            width: 300px;
         }
     }
 }

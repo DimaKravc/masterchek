@@ -72,19 +72,18 @@ if (!function_exists('theme_load_scripts')) :
         wp_enqueue_style('owlcarousel-default', get_template_directory_uri() . '/styles/owl.theme.default.min.css', array('owlcarousel'), MASTERCHEK_VERSION);
         wp_enqueue_style('bootstrap', get_template_directory_uri() . '/styles/bootstrap.min.css', array(), MASTERCHEK_VERSION);
         wp_enqueue_style('bootstrap-theme', get_template_directory_uri() . '/styles/bootstrap-theme.min.css', array('bootstrap'), MASTERCHEK_VERSION);
-        wp_enqueue_style('range-slider', get_template_directory_uri() . '/styles/jquery.range.css', array(), MASTERCHEK_VERSION);
+        wp_enqueue_style('jquery-ui', get_template_directory_uri() . '/styles/jquery-ui.min.css', array(), MASTERCHEK_VERSION);
         wp_enqueue_style('style', get_template_directory_uri() . '/style.css', array(), MASTERCHEK_VERSION);
 
         /**
          * Load scripts
          */
-        wp_enqueue_script("jquery-ui-core", array('jquery'), MASTERCHEK_VERSION, true);
-        wp_enqueue_script("jquery-ui-selectmenu", array('jquery', 'jquery-ui-core'), MASTERCHEK_VERSION, true);
-        //wp_enqueue_script("jquery-ui-slider", array('jquery', 'jquery-ui-core'), MASTERCHEK_VERSION, true);
-        wp_enqueue_script("range-slider", get_template_directory_uri() . '/js/jquery.range-min.js', array('jquery'), MASTERCHEK_VERSION, true);
+        wp_enqueue_script('jquery-ui-core', array('jquery'), MASTERCHEK_VERSION, true);
+        wp_enqueue_script('jquery-ui-selectmenu', array('jquery', 'jquery-ui-core'), MASTERCHEK_VERSION, true);
+        wp_enqueue_script('jquery-ui-slider', array('jquery', 'jquery-ui-core'), MASTERCHEK_VERSION, true);
         wp_enqueue_script('owlcarousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), MASTERCHEK_VERSION, true);
         wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), MASTERCHEK_VERSION, true);
-        wp_enqueue_script('application', get_template_directory_uri() . '/js/application.js', array('jquery-ui-selectmenu', 'range-slider', 'owlcarousel'), MASTERCHEK_VERSION, true);
+        wp_enqueue_script('application', get_template_directory_uri() . '/js/application.js', array('jquery-ui-selectmenu', 'jquery-ui-slider', 'owlcarousel'), MASTERCHEK_VERSION, true);
         wp_enqueue_script('main', get_template_directory_uri() . '/js/main.js', array('application'), MASTERCHEK_VERSION, true);
 
         $google_api_key = get_google_api_key();

@@ -36,6 +36,8 @@ jQuery(document).ready(function ($) {
                     setTimeout(stopLoader, 900);
                 }
             });
+
+            return $loader
         },
         selectMenu: function () {
             $('[data-js="select"]').selectmenu();
@@ -54,29 +56,50 @@ jQuery(document).ready(function ($) {
             })
         },
         slider: function () {
-            $('[data-js="period-range-slider"]').jRange({
-                width: '300',
-                from: 3,
-                to: 12,
+            var $sliderNode = $('[data-js="period-slider"]');
+            var $viewNode = $('[data-view="period-slider"]');
+            var $pointNode = $('.period-slider').find('[class^="round"]');
+
+            $sliderNode.slider({
+                min: 3,
+                max: 12,
                 step: 3,
-                scale: [3, 6, 9, 12],
-                format: '%s',
-                showLabels: true,
-                snap: true,
-                onstatechange: function (e) {
-                    var label = '';
-
-                    if (e === '1') {
-                        label = '1 Месяц';
-                    } else if (e < 5) {
-                        label = e + ' Месяца';
-                    } else {
-                        label = e + ' Месяцев';
-                    }
-
-                    $('[data-view="period-range-slider"]').text(label)
+                slide: function (event, ui) {
+                    $('input#period').val(ui.value);
+                    $viewNode.text(getMonthEnding(ui.value));
+                    $(this).parent().attr('data-step', ui.value / $(this).slider('option', 'step'));
+                },
+                change: function (event, ui) {
+                    $('input#period').val(ui.value);
+                    $viewNode.text(getMonthEnding(ui.value));
+                    $(this).parent().attr('data-step', ui.value / $(this).slider('option', 'step'));
                 }
             });
+            $('input#period').val($sliderNode.slider('value'));
+            $viewNode.text(getMonthEnding($sliderNode.slider('value')));
+            $pointNode.on('click', function (event) {
+                event.preventDefault();
+
+                $sliderNode.slider('option', 'value', this.dataset.value);
+            });
+
+            function getMonthEnding(val) {
+                var objNumbers = String(val).split('');
+                var lastChar = objNumbers[objNumbers.length - 1];
+                var penultChar = objNumbers[objNumbers.length - 2];
+
+                if (lastChar === '1' && penultChar !== '1') {
+                    return val + ' Месяц';
+                }
+
+                if ((lastChar === '2' || lastChar === '3' || lastChar === '4') && penultChar !== '1') {
+                    return val + ' Месяца';
+                }
+
+                return val + ' Месяцев';
+            }
+
+            return $sliderNode;
         },
         offerCarousel: function () {
             $(window).load(function () {

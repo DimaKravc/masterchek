@@ -8,7 +8,7 @@
         align-items: center;
 
         &__icon {
-            margin: 0 rem(20px);
+            margin-right: rem(20px);
 
             &.mail {
                 width: rem(48px);
@@ -30,7 +30,8 @@
         }
 
         a {
-            &:hover {
+            &:hover,
+            &:focus {
                 color: #ffffff;
             }
         }

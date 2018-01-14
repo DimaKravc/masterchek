@@ -140,3 +140,15 @@
         }
     }
 }
+
+@media (max-width: $screen-sm-max) {
+    .checkout {
+        display: block;
+
+        &__order,
+        &__form {
+            width: 100%;
+            padding: rem(35px) rem(24px) rem(30px);
+        }
+    }
+}

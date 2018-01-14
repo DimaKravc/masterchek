@@ -10,7 +10,7 @@
                                 <h3 class="checkout-header__heading"><span class="i-basket"></span>Корзина</h3>
                                 <dl class="checkout__total">
                                     <dt>Общий итог:</dt>
-                                    <dd>753.000 сум</dd>
+                                    <dd>750.000 сум</dd>
                                 </dl>
                             </div>
                             <div class="order">
@@ -37,15 +37,15 @@
                                 <div class="order__item" data-id="#order-1">
                                     <dl class="order__item__row">
                                         <dt>Место распростронения:</dt>
-                                        <dd>makro</dd>
+                                        <dd>Makro</dd>
                                     </dl>
                                     <dl class="order__item__row">
                                         <dt>Адрес:</dt>
-                                        <dd>ТАШКЕНТ Чиланзарский район ул. МУКИМИ, 1А</dd>
+                                        <dd>Макро ТашМИ</dd>
                                     </dl>
                                     <dl class="order__item__row">
                                         <dt>Пакет:</dt>
-                                        <dd>лайт</dd>
+                                        <dd>LIGHT</dd>
                                     </dl>
                                     <dl class="order__item__row">
                                         <dt>Размер модуля:</dt>
@@ -58,7 +58,63 @@
                                     <div class="order__item__footer">
                                         <dl class="order__item__total">
                                             <dt>итоговая сумма заказа№ 1:</dt>
-                                            <dd>180.000 сум</dd>
+                                            <dd>180 000 сум</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="order__item" data-id="#order-2">
+                                    <dl class="order__item__row">
+                                        <dt>Место распростронения:</dt>
+                                        <dd>Makro</dd>
+                                    </dl>
+                                    <dl class="order__item__row">
+                                        <dt>Адрес:</dt>
+                                        <dd>Макро Мегапланет</dd>
+                                    </dl>
+                                    <dl class="order__item__row">
+                                        <dt>Пакет:</dt>
+                                        <dd>MAX</dd>
+                                    </dl>
+                                    <dl class="order__item__row">
+                                        <dt>Размер модуля:</dt>
+                                        <dd>S</dd>
+                                    </dl>
+                                    <dl class="order__item__row">
+                                        <dt>Срок размещения:</dt>
+                                        <dd>6 месяца</dd>
+                                    </dl>
+                                    <div class="order__item__footer">
+                                        <dl class="order__item__total">
+                                            <dt>итоговая сумма заказа№ 2:</dt>
+                                            <dd>12 321 000 сум</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <div class="order__item" data-id="#order-3">
+                                    <dl class="order__item__row">
+                                        <dt>Место распростронения:</dt>
+                                        <dd>Makro</dd>
+                                    </dl>
+                                    <dl class="order__item__row">
+                                        <dt>Адрес:</dt>
+                                        <dd>Макро Новомосковская</dd>
+                                    </dl>
+                                    <dl class="order__item__row">
+                                        <dt>Пакет:</dt>
+                                        <dd>VIP</dd>
+                                    </dl>
+                                    <dl class="order__item__row">
+                                        <dt>Размер модуля:</dt>
+                                        <dd>VIP</dd>
+                                    </dl>
+                                    <dl class="order__item__row">
+                                        <dt>Срок размещения:</dt>
+                                        <dd>9 месяца</dd>
+                                    </dl>
+                                    <div class="order__item__footer">
+                                        <dl class="order__item__total">
+                                            <dt>итоговая сумма заказа№ 3:</dt>
+                                            <dd>13 150 000 сум</dd>
                                         </dl>
                                     </div>
                                 </div>

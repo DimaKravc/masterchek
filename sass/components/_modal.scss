@@ -54,7 +54,8 @@
     .modal {
         $this: &;
 
-        &_advice {
+        &_advice,
+        &_checkout {
             #{$this}-dialog {
                 width: 750px;
             }
@@ -66,7 +67,8 @@
     .modal {
         $this: &;
 
-        &_advice {
+        &_advice,
+        &_checkout {
             #{$this}-dialog {
                 width: 500px;
             }
@@ -78,7 +80,8 @@
     .modal {
         $this: &;
 
-        &_advice {
+        &_advice,
+        &_checkout {
             #{$this}-dialog {
                 min-width: 300px;
                 width: 94%;
