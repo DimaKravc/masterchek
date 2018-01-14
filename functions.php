@@ -185,6 +185,18 @@ function request_for_advice_callback()
         );
 
         $Mch_Support->add_entry($args);
+
+        $email_address = !empty($meta_data['_meta-contact-mail'][0]) ? $meta_data['_meta-contact-mail'][0] : '';
+        if ($email_address) {
+            $subject = 'Запрос mastercheck.uz ' . $_POST['subject'];
+            $headers = array(
+                'ФИО: ' . $_POST['author'],
+                'Email: ' . $_POST['email'],
+                'Телефон: ' . $_POST['tel']
+            );
+            wp_mail($email_address, $subject, $_POST['message'], $headers);
+        }
+
     }
 
     wp_die();
