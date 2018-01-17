@@ -23,15 +23,16 @@
                                     <input data-js="input" type="tel" id="tel" name="tel" required autocomplete="off"
                                            onkeypress='return /[\d()+\-\s]/.test(event.key)'>
                                 </div>
-                                <div class="form__group --select">
+                                <div class="form__group">
                                     <label for="subject">Тематика вопроса</label>
-                                    <select data-js="select" name="subject" id="subject">
-                                        <option value="Как работает реклама на чеках">Как работает реклама на чеках
-                                        </option>
-                                        <option value="Индивидуальный дизайн">Индивидуальный дизайн</option>
-                                        <option value="Места распространения">Места распространения</option>
-                                        <option value="Нужна консультация">Нужна консультация</option>
-                                    </select>
+                                    <div class="styled-select">
+                                        <select name="subject" id="subject">
+                                            <option value="Как работает реклама на чеках">Как работает реклама на чеках</option>
+                                            <option value="Индивидуальный дизайн">Индивидуальный дизайн</option>
+                                            <option value="Места распространения">Места распространения</option>
+                                            <option value="Нужна консультация">Нужна консультация</option>
+                                        </select>
+                                    </div>
                                 </div>
                                 <div class="form__group">
                                     <label for="message">Сообщение</label>

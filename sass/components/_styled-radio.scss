@@ -1,0 +1,60 @@
+$color1: #f4f4f4;
+$color2: #c03842;
+
+.styled-radio {
+    display: none;
+
+    & + label {
+        position: relative;
+        font-size: rem(15px);
+        padding-left: rem(30px);
+        text-transform: uppercase;
+        user-select: none;
+        margin-bottom: 0;
+        cursor: pointer;
+
+        &:before {
+            content: '';
+            background: $color1;
+            border-radius: 100%;
+            border: 1px solid darken($color1, 25%);
+            display: inline-block;
+            width: rem(22px);
+            height: rem(22px);
+            position: absolute;
+            left: 0;
+            top: 50%;
+            margin-top: rem(-11px);
+            cursor: pointer;
+            text-align: center;
+            transition: all 250ms ease;
+        }
+    }
+
+    &:disabled {
+        & + label {
+            color: darken($color1, 25%);
+            cursor: default;
+
+            &:before {
+                box-shadow: inset 0 0 0 4px $color1;
+                border-color: darken($color1, 25%);
+                background: darken($color1, 25%);
+                cursor: default;
+            }
+        }
+    }
+
+    &:checked {
+        & + label {
+            color: $color2;
+            cursor: default;
+
+            &:before {
+                background-color: $color2;
+                box-shadow: inset 0 0 0 4px $color1;
+                cursor: default;
+            }
+        }
+    }
+}

@@ -11,6 +11,11 @@
                 margin-bottom: 0;
             }
         }
+
+        .styled-select {
+            margin-top: rem(12px);
+            text-transform: uppercase;
+        }
     }
 
     &__content {

@@ -33,10 +33,10 @@
     )); ?>
     <a href="#calculator" class="button order-button">заказать чек</a>
     <span class="site-header__divider"></span>
-    <div data-toggle="modal" data-target="#checkoutModal" class="shopping-bag">
+    <div data-action="checkout" data-toggle="modal" data-target="#checkoutModal" class="shopping-bag">
         <span class="shopping-bag__icon"></span>
         <p class="shopping-bag__title">корзина</p>
-        <span class="shopping-bag__amount">3</span>
+        <span class="shopping-bag__amount" data-view="count">0</span>
     </div>
 </header>
 <?php get_template_part('template-parts/modal-checkout-form'); ?>

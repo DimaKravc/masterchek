@@ -10,118 +10,19 @@
                                 <h3 class="checkout-header__heading"><span class="i-basket"></span>Корзина</h3>
                                 <dl class="checkout__total">
                                     <dt>Общий итог:</dt>
-                                    <dd>750.000 сум</dd>
+                                    <dd data-view="total">750.000 сум</dd>
                                 </dl>
                             </div>
                             <div class="order">
-                                <ul class="order__tab-list">
-                                    <li class="order__tab-list__item">
-                                        <button class="order__tab active" data-tab="#order-1">
-                                            <a href="#" class="order__cancel" data-order="1"></a>
-                                            Заказ №1
-                                        </button>
-                                    </li>
-                                    <li class="order__tab-list__item">
-                                        <button class="order__tab" data-tab="#order-2">
-                                            <a href="#" class="order__cancel" data-order="2"></a>
-                                            Заказ №2
-                                        </button>
-                                    </li>
-                                    <li class="order__tab-list__item">
-                                        <button class="order__tab" data-tab="#order-3">
-                                            <a href="#" class="order__cancel" data-order="3"></a>
-                                            Заказ №3
-                                        </button>
-                                    </li>
+                                <ul class="order__tab-list" data-area="tabs">
                                 </ul>
-                                <div class="order__item" data-id="#order-1">
-                                    <dl class="order__item__row">
-                                        <dt>Место распростронения:</dt>
-                                        <dd>Makro</dd>
-                                    </dl>
-                                    <dl class="order__item__row">
-                                        <dt>Адрес:</dt>
-                                        <dd>Макро ТашМИ</dd>
-                                    </dl>
-                                    <dl class="order__item__row">
-                                        <dt>Пакет:</dt>
-                                        <dd>LIGHT</dd>
-                                    </dl>
-                                    <dl class="order__item__row">
-                                        <dt>Размер модуля:</dt>
-                                        <dd>L</dd>
-                                    </dl>
-                                    <dl class="order__item__row">
-                                        <dt>Срок размещения:</dt>
-                                        <dd>3 месяца</dd>
-                                    </dl>
-                                    <div class="order__item__footer">
-                                        <dl class="order__item__total">
-                                            <dt>итоговая сумма заказа№ 1:</dt>
-                                            <dd>180 000 сум</dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                                <div class="order__item" data-id="#order-2">
-                                    <dl class="order__item__row">
-                                        <dt>Место распростронения:</dt>
-                                        <dd>Makro</dd>
-                                    </dl>
-                                    <dl class="order__item__row">
-                                        <dt>Адрес:</dt>
-                                        <dd>Макро Мегапланет</dd>
-                                    </dl>
-                                    <dl class="order__item__row">
-                                        <dt>Пакет:</dt>
-                                        <dd>MAX</dd>
-                                    </dl>
-                                    <dl class="order__item__row">
-                                        <dt>Размер модуля:</dt>
-                                        <dd>S</dd>
-                                    </dl>
-                                    <dl class="order__item__row">
-                                        <dt>Срок размещения:</dt>
-                                        <dd>6 месяца</dd>
-                                    </dl>
-                                    <div class="order__item__footer">
-                                        <dl class="order__item__total">
-                                            <dt>итоговая сумма заказа№ 2:</dt>
-                                            <dd>12 321 000 сум</dd>
-                                        </dl>
-                                    </div>
-                                </div>
-                                <div class="order__item" data-id="#order-3">
-                                    <dl class="order__item__row">
-                                        <dt>Место распростронения:</dt>
-                                        <dd>Makro</dd>
-                                    </dl>
-                                    <dl class="order__item__row">
-                                        <dt>Адрес:</dt>
-                                        <dd>Макро Новомосковская</dd>
-                                    </dl>
-                                    <dl class="order__item__row">
-                                        <dt>Пакет:</dt>
-                                        <dd>VIP</dd>
-                                    </dl>
-                                    <dl class="order__item__row">
-                                        <dt>Размер модуля:</dt>
-                                        <dd>VIP</dd>
-                                    </dl>
-                                    <dl class="order__item__row">
-                                        <dt>Срок размещения:</dt>
-                                        <dd>9 месяца</dd>
-                                    </dl>
-                                    <div class="order__item__footer">
-                                        <dl class="order__item__total">
-                                            <dt>итоговая сумма заказа№ 3:</dt>
-                                            <dd>13 150 000 сум</dd>
-                                        </dl>
-                                    </div>
+                                <div data-area="tab-entry">
+
                                 </div>
                             </div>
                         </div>
                         <div class="checkout__form">
-                            <form class="form" data-form="advice">
+                            <form class="form" data-form="order">
                                 <div class="form__group">
                                     <label for="name">Ф.И.О.</label>
                                     <input data-js="input" type="text" id="name" name="name" required
@@ -147,7 +48,7 @@
                                 <?php wp_nonce_field('request_for_order'); ?>
                                 <input type="hidden" name="action" value="request_for_order"/>
                                 <div class="form__control">
-                                    <input type="submit" class="button" value="оформить заказ">
+                                    <input data-order="submit" type="submit" class="button" value="оформить заказ">
                                 </div>
                                 <div data-tooltip="success" style="display: none">
                                     <div class="form__success-tooltip">Ваш запрос успешно отправлен.</div>

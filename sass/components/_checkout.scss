@@ -3,7 +3,7 @@
 
     &__order {
         width: 57%;
-        padding: rem(30px) rem(30px) rem(50px) rem(35px);
+        padding: rem(30px) rem(30px) rem(50px) rem(30px);
         background: url("images/basket.jpg") no-repeat center/cover;
         color: #FFFFFF;
     }
@@ -32,10 +32,12 @@
     .order {
         &__tab-list {
             display: flex;
-            margin-bottom: rem(30px);
+            flex-wrap: wrap;
+            margin-bottom: rem(20px);
 
             &__item {
                 position: relative;
+                margin-bottom: rem(10px);
 
                 &:not(:last-child) {
                     margin-right: rem(10px);
@@ -45,13 +47,14 @@
 
         &__tab {
             font-size: rem(14px);
+            text-align: center;
             background: none;
             outline: none;
             border: 1px solid #ffffff;
             border-radius: 2px;
             height: 34px;
-            min-width: 100px;
-            padding: 0 20px;
+            min-width: 105px;
+            padding: 0 16px;
             color: #ffffff;
             display: block;
             opacity: all $transition-time;
@@ -138,6 +141,12 @@
                 margin-bottom: 0;
             }
         }
+    }
+
+    .bag-empty {
+        text-align: center;
+        margin: rem(35px) 0;
+        font-size: rem(20px);
     }
 }
 

@@ -79,7 +79,6 @@ if (!function_exists('theme_load_scripts')) :
          * Load scripts
          */
         wp_enqueue_script('jquery-ui-core', array('jquery'), MASTERCHEK_VERSION, true);
-        wp_enqueue_script('jquery-ui-selectmenu', array('jquery', 'jquery-ui-core'), MASTERCHEK_VERSION, true);
         wp_enqueue_script('jquery-ui-slider', array('jquery', 'jquery-ui-core'), MASTERCHEK_VERSION, true);
         wp_enqueue_script('owlcarousel', get_template_directory_uri() . '/js/owl.carousel.min.js', array('jquery'), MASTERCHEK_VERSION, true);
         wp_enqueue_script('bootstrap', get_template_directory_uri() . '/js/bootstrap.min.js', array('jquery'), MASTERCHEK_VERSION, true);
@@ -94,7 +93,9 @@ if (!function_exists('theme_load_scripts')) :
 
         wp_localize_script('application', 'mch_ajax_data',
             array(
-                'url' => admin_url('admin-ajax.php')
+                'url' => admin_url('admin-ajax.php'),
+                'nonce' => wp_create_nonce('request_for_filter'),
+                'nonce_order' => wp_create_nonce('request_for_order')
             )
         );
     }
@@ -186,17 +187,15 @@ function request_for_advice_callback()
 
         $Mch_Support->add_entry($args);
 
-        $email_address = !empty($meta_data['_meta-contact-mail'][0]) ? $meta_data['_meta-contact-mail'][0] : '';
-        if ($email_address) {
-            $subject = 'Запрос mastercheck.uz ' . $_POST['subject'];
-            $headers = array(
-                'ФИО: ' . $_POST['author'],
-                'Email: ' . $_POST['email'],
-                'Телефон: ' . $_POST['tel']
-            );
-            wp_mail($email_address, $subject, $_POST['message'], $headers);
-        }
+        $subject = 'Запрос mastercheck.uz: ' . $_POST['subject'];
+        $to = 'Info@mastercheck.uz';
+        $message = 'ФИО: ' . $_POST['author'] . "\r\n";
+        $message .= 'Email: ' . $_POST['email'] . "\r\n";
+        $message .= 'Телефон: ' . $_POST['tel'] . "\r\n";
+        $message .= 'Тематика вопроса: ' . $_POST['subject'] . "\r\n";
+        $message .= 'Сообщение: ' . $_POST['message'];
 
+        echo wp_mail($to, $subject, $message);
     }
 
     wp_die();
@@ -205,6 +204,57 @@ function request_for_advice_callback()
 if (wp_doing_ajax()) {
     add_action('wp_ajax_request_for_advice', 'request_for_advice_callback');
     add_action('wp_ajax_nopriv_request_for_advice', 'request_for_advice_callback');
+}
+
+function request_for_filter_callback()
+{
+    if (empty($_POST) || !check_ajax_referer('request_for_filter', 'nonce_code', false)) {
+        die();
+    } else {
+        echo get_filter($_POST['place'], $_POST['package'], $_POST['address'], $_POST['size'], $_POST['period']);
+    }
+
+    wp_die();
+}
+
+if (wp_doing_ajax()) {
+    add_action('wp_ajax_request_for_filter', 'request_for_filter_callback');
+    add_action('wp_ajax_nopriv_request_for_filter', 'request_for_filter_callback');
+}
+
+function request_for_order_callback()
+{
+    if (empty($_POST) || !check_ajax_referer('request_for_order', 'nonce_code', false)) {
+        die();
+    } else {
+        $subject = 'Запрос mastercheck.uz: ' . 'Новый заказ';
+        $to = 'Info@mastercheck.uz';
+        $message = 'ФИО: ' . $_POST['name'] . "\r\n";
+        $message .= 'Email: ' . $_POST['email'] . "\r\n";
+        $message .= 'Телефон: ' . $_POST['tel'] . "\r\n";
+        $message .= 'Организация: ' . $_POST['org'] . "\r\n";
+        $message .= "\r\n";
+
+        foreach ($_POST['orders'] as $key => $order) {
+            $message .= 'Заказ №' . ($key + 1) . "\r\n";
+            $message .= "\t" . 'Место: ' . $order['place'] . "\r\n";
+            $message .= "\t" . 'Пакет: ' . $order['package'] . "\r\n";
+            $message .= "\t" . 'Адрес: ' . $order['address'] . "\r\n";
+            $message .= "\t" . 'Размер: ' . $order['size'] . "\r\n";
+            $message .= "\t" . 'Период: ' . $order['period'] . "\r\n";
+            $message .= "\t" . 'Цена: ' . $order['amount'] . "\r\n";
+            $message .= "\r\n";
+        }
+
+        echo wp_mail($to, $subject, $message);
+    }
+
+    wp_die();
+}
+
+if (wp_doing_ajax()) {
+    add_action('wp_ajax_request_for_order', 'request_for_order_callback');
+    add_action('wp_ajax_nopriv_request_for_order', 'request_for_order_callback');
 }
 
 if (!function_exists('additional_contact_methods')):
@@ -245,5 +295,6 @@ remove_action('wp_head', 'wlwmanifest_link');
 require get_template_directory() . '/inc/mch-class-support.php';
 require get_template_directory() . '/inc/mch-post-types.php';
 require get_template_directory() . '/inc/mch-meta-boxes.php';
+require get_template_directory() . '/inc/mch-filter-generator.php';
 #require get_template_directory() . '/inc/tgm/tgm-plugin-registration.php';
 
